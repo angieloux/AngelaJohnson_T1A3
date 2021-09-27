@@ -1,19 +1,15 @@
-# require relative files:
-  # require_relative "store1"
-  
-  # require_relative "toys1"
-  # require_relative "vinyl1"
-  # require_relative "visitor1"
-  # require_relative "games1"
-
-  # require_relative "store1"
-
+# require gems
   require 'colorize'
   require 'tty-prompt'
   require 'ruby-progressbar'
   require 'artii'
+
+
+  # require relative files:
   require_relative "department"
   require_relative "vinyl"
+  
+  # create Department instance 
   store = Department.new
   
 

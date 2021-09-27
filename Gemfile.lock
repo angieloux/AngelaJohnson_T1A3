@@ -3,6 +3,7 @@ GEM
   specs:
     artii (2.1.2)
     colorize (0.8.1)
+    json (2.5.1)
     pastel (0.8.0)
       tty-color (~> 0.5)
     ruby-progressbar (1.11.0)
@@ -24,6 +25,7 @@ PLATFORMS
 DEPENDENCIES
   artii (~> 2.1)
   colorize (~> 0.8.1)
+  json (~> 2.5)
   ruby-progressbar (~> 1.11)
   tty-prompt (~> 0.23.1)
 
