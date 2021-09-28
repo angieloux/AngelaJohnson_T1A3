@@ -19,5 +19,7 @@ class Department
 
     def pay_for_item
     end
+
+
 end
 
