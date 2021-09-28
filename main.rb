@@ -10,48 +10,39 @@
   require_relative "vinyl"
   
   # create Department instance 
-  store = Department.new
+  department = Department.new
+  @prompt = TTY::Prompt.new
+  @vinyl_department = VinylDepartment.new
+  store_name = Artii::Base.new
   
 
-  store_name = Artii::Base.new
-  @prompt = TTY::Prompt.new
-  puts store_name.asciify('Rockaway Records!')
+
+  puts store_name.asciify("AJ's Records!")
   puts "You arrive at a swanky looking retro record store. " +
   "The aisles are lined with hundreds of records, CDs, games, comic books.... " +
   "the walls are covered in posters and memorabilia, there are a million pop vinyl and other toys staring directly at you. " +
   "Oh my god is that Baby Yoda? You're so overstimulated your eyeballs almost explode. \n"
-  
-  
-  def walk(department)
-    system 'clear'
-    # display a progress bar while the visitor *walks* over to the department
-    puts "\n・・・～～～～～ᕕ( ᐛ )ᕗ #{department} here I come!" # imitate the visitor walking
-    progressbar = ProgressBar.create
-    10.times { progressbar.increment; sleep 0.20}
-  end
+
 
   def choose_department(choice)
+    puts "\n・・・～～～～～ᕕ( ᐛ )ᕗ" # imitate the visitor walking
+    progressbar = ProgressBar.create
+    10.times { progressbar.increment; sleep 0.20}
     case choice
         when 1
-            department = "Vinyl"
-            vinyl ||= Vinyl.new
+            @vinyl_department.display_menu
         when 2 
-            department = "Listening Station"
-            listening_station ||= ListeningStation.new
+            @listening_station_department.display_menu
         when 3
-            department = "Games"
-            games ||= Games.new
+            @games_department.display_menu
         when 4
-            department = "Toys"
-            vinyl ||= Vinyl.new
+            @toys_department.display_menu
         when 5
-            department = "Counter"
-            vinyl ||= Vinyl.new
+            @counter_department.display_menu
         when 6
             exit
-        end 
-        walk(department)
-end
+    end 
+  end
 
   def look_around
     input = @prompt.select('Where do you want to go?') do |menu|

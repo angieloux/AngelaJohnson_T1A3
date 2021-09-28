@@ -14,3 +14,5 @@ gem "tty-prompt", "~> 0.23.1"
 gem "ruby-progressbar", "~> 1.11"
 
 gem "json", "~> 2.5"
+
+gem "rspec", "~> 3.10"
