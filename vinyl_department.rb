@@ -4,28 +4,33 @@ require "tty-prompt"
 # require 'activesupport'
 
 class VinylDepartment < Department
+  attr_reader :record
   def initialize
     file = File.read("vinyl.json")
     @stock = JSON.parse(file)
     @prompt = TTY::Prompt.new
-    @cat_no = 0
+    @record = record
+    @cart =[]
+
   end
 
   def display_records
-    @cat_no += 1
-    puts "Catalogue number: #{@cat_no}\n" +      # hardcode cat numbers?
-           "ALBUM: #{@record["Album"]}\n" +
-           "ARTIST: #{@record["Artist"]}\n" +
-           "YEAR: #{@record["Year"]}\n" +
-           "GENRE: #{@record["Genre"]}\n" +
-           "SUBGENRE: #{@record["Subgenre"]}\n" +
-           "PRICE $#{@record["Price"]}\n" +
-           "=========================="
+    # @cat_no += 1
+    puts "CATALOGUE #: #{@record["Catno"]}\n" +
+    "ALBUM: #{@record["Album"]}\n" +
+    "ARTIST: #{@record["Artist"]}\n" +
+    "YEAR: #{@record["Year"]}\n" +
+    "GENRE: #{@record["Genre"]}\n" +
+    "SUBGENRE: #{@record["Subgenre"]}\n" +
+    "PRICE $#{@record["Price"]}\n" +
+    "=========================="
   end
 
   def filter_products(filter_choice)
     system("clear")
     case filter_choice
+
+    # BY GENRE **********
     when 1
       puts "What genre are you looking for?"
       genre = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
@@ -35,6 +40,10 @@ class VinylDepartment < Department
           display_records
         end
       end
+      add_items_to_cart
+        
+          
+    # BY ARTIST **********
     when 2
       puts "What artist are you looking for?"
       artist = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
@@ -44,7 +53,11 @@ class VinylDepartment < Department
         if @record["Artist"].include?(artist)
             display_records
         end
+        
       end
+      add_items_to_cart
+
+    # BY ALBUM **********
     when 3
       puts "What album are you looking for? (keywords are ok!)"
       title = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
@@ -54,7 +67,9 @@ class VinylDepartment < Department
           display_records
         end
       end
-      
+      add_items_to_cart
+
+    # BY PRICE **********
     when 4
       puts "Whats the max you're willing to pay for a record?"
       price = gets.to_i
@@ -64,6 +79,16 @@ class VinylDepartment < Department
             display_records
         end
       end
+      add_items_to_cart
+
+    # VIEW CART ***********
+    when 5
+      display_cart
+      display_menu
+
+    # LOOK AROUND THE STORE **********
+    when 6
+      look_around
     end
   end
 
