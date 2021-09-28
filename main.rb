@@ -5,20 +5,22 @@ require "ruby-progressbar"
 require "artii"
 
 # require relative files:
-require_relative "department"
-require_relative "vinyl"
+require_relative "department" # parent class
+require_relative "vinyl_department"
+require_relative "toys_department"
+require_relative "games_department"
+require_relative "listening_station_department"
 
-# create Department instance
+# create instance of all Departments
 department = Department.new
-@prompt = TTY::Prompt.new
 @vinyl_department = VinylDepartment.new
-store_name = Artii::Base.new
+@toys_department = ToysDepartment.new
+@games_department = GamesDepartment.new
+@listening_station_department = ListeningStationDepartment.new
 
-puts store_name.asciify("AJ's Records!")
-puts "You arrive at a swanky looking retro record store. " +
-       "The aisles are lined with hundreds of records, CDs, games, comic books.... " +
-       "the walls are covered in posters and memorabilia, there are a million pop vinyl and other toys staring directly at you. " +
-       "Oh my god is that Baby Yoda? You're so overstimulated your eyeballs almost explode. \n"
+# create tty-prompt and artii instances
+@prompt = TTY::Prompt.new
+store_name = Artii::Base.new
 
 def choose_department(choice)
   system "clear"
@@ -53,10 +55,16 @@ def look_around
   choose_department(input)
 end
 
+puts store_name.asciify("AJ's Records!")
+puts "You arrive at a swanky looking retro record store. " +
+       "The aisles are lined with hundreds of records, CDs, games, comic books.... " +
+       "the walls are covered in posters and memorabilia, there are a million pop vinyl and other toys staring directly at you. " +
+       "Oh my god is that Baby Yoda? You're so overstimulated your eyeballs almost explode. \n"
+
 answer = @prompt.yes?("Do you want to go in?")
 if !answer
   system "clear"
-  puts "You realise you have absolutely no understanding of how to talk to humans anymore since COVID. You turn around and leave."
+  puts "You realise you have absolutely no understanding of how to talk to humans anymore since COVID. You turn around and leave.".red
   exit
 else
   look_around

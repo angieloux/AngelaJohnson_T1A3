@@ -50,7 +50,7 @@
     {
         "Price": 49.99,
         "Year": 1972,
-        "Album": "Exile on Main St.",
+        "Album": "Exile On Main St.",
         "Artist": "The Rolling Stones",
         "Genre": "Rock",
         "Subgenre": "Blues Rock, Rock & Roll, Classic Rock"
@@ -66,7 +66,7 @@
     {
         "Price": 49.99,
         "Year": 1966,
-        "Album": "Blonde on Blonde",
+        "Album": "Blonde On Blonde",
         "Artist": "Bob Dylan",
         "Genre": "Rock, Blues",
         "Subgenre": "Folk Rock, Rhythm & Blues"
@@ -90,7 +90,7 @@
     {
         "Price": 49.99,
         "Year": 1959,
-        "Album": "Kind of Blue",
+        "Album": "Kind Of Blue",
         "Artist": "Miles Davis",
         "Genre": "Jazz",
         "Subgenre": "Modal"
@@ -122,7 +122,7 @@
     {
         "Price": 49.99,
         "Year": 1975,
-        "Album": "Blood on the Tracks",
+        "Album": "Blood On The Tracks",
         "Artist": "Bob Dylan",
         "Genre": "Rock",
         "Subgenre": "Folk Rock, Acoustic, Ballad"
@@ -138,7 +138,7 @@
     {
         "Price": 49.99,
         "Year": 1975,
-        "Album": "Born to Run",
+        "Album": "Born To Run",
         "Artist": "Bruce Springsteen",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -194,7 +194,7 @@
     {
         "Price": 49.99,
         "Year": 1963,
-        "Album": "Live at the Apollo, 1962",
+        "Album": "Live At The Apollo, 1962",
         "Artist": "James Brown",
         "Genre": "Funk / Soul",
         "Subgenre": "Rhythm & Blues, Soul"
@@ -274,7 +274,7 @@
     {
         "Price": 49.99,
         "Year": 1972,
-        "Album": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
+        "Album": "The Rise And Fall Of Ziggy Stardust And The Spiders From Mars",
         "Artist": "David Bowie",
         "Genre": "Rock",
         "Subgenre": "Classic Rock, Glam"
@@ -322,7 +322,7 @@
     {
         "Price": 49.99,
         "Year": 1977,
-        "Album": "Never Mind the Bollocks Here's the Sex Pistols",
+        "Album": "Never Mind The Bollocks Here's The Sex Pistols",
         "Artist": "Sex Pistols",
         "Genre": "Rock",
         "Subgenre": "Punk"
@@ -338,7 +338,7 @@
     {
         "Price": 49.99,
         "Year": 1973,
-        "Album": "The Dark Side of the Moon",
+        "Album": "The Dark Side Of The Moon",
         "Artist": "Pink Floyd",
         "Genre": "Rock",
         "Subgenre": "Prog Rock"
@@ -362,7 +362,7 @@
     {
         "Price": 49.99,
         "Year": 1984,
-        "Album": "Legend: The Best of Bob Marley and The Wailers",
+        "Album": "Legend: The Best Of Bob Marley And The Wailers",
         "Artist": "Bob Marley & The Wailers",
         "Genre": "Reggae",
         "Subgenre": "Reggae, Roots Reggae"
@@ -378,7 +378,7 @@
     {
         "Price": 49.99,
         "Year": 1988,
-        "Album": "It Takes a Nation of Millions to Hold Us Back",
+        "Album": "It Takes a Nation Of Millions To Hold Us Back",
         "Artist": "Public Enemy",
         "Genre": "Hip Hop",
         "Subgenre": "Conscious"
@@ -426,7 +426,7 @@
     {
         "Price": 59.99,
         "Year": 1991,
-        "Album": "The Birth of Soul",
+        "Album": "The Birth Of Soul",
         "Artist": "Ray Charles",
         "Genre": "Jazz, Funk / Soul",
         "Subgenre": "Rhythm & Blues, Big Band, Soul, Soul-Jazz"
@@ -450,7 +450,7 @@
     {
         "Price": 59.99,
         "Year": 1976,
-        "Album": "Songs in the Key of Life",
+        "Album": "Songs In The Key Of Life",
         "Artist": "Stevie Wonder",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul, Disco"
@@ -514,7 +514,7 @@
     {
         "Price": 59.99,
         "Year": 1991,
-        "Album": "Back to Mono (1958-1969)",
+        "Album": "Back To Mono (1958-1969)",
         "Artist": "Phil Spector",
         "Genre": "Rock, Funk / Soul, Pop",
         "Subgenre": "Doo Wop, Pop Rock, Ballad, Rhythm & Blues"
@@ -538,7 +538,7 @@
     {
         "Price": 59.99,
         "Year": 1979,
-        "Album": "Off the Wall",
+        "Album": "Off The Wall",
         "Artist": "Michael Jackson",
         "Genre": "Funk / Soul, Pop",
         "Subgenre": "Disco, Soul, Ballad"
@@ -586,7 +586,7 @@
     {
         "Price": 59.99,
         "Year": 1970,
-        "Album": "After the Gold Rush",
+        "Album": "After The Gold Rush",
         "Artist": "Neil Young",
         "Genre": "Rock",
         "Subgenre": "Rock & Roll, Country Rock"
@@ -603,18 +603,18 @@
         "Price": 99.99,
         "Year": 1984,
         "Album": "Purple Rain",
-        "Artist": "Prince and the Revolution",
+        "Artist": "Prince And The Revolution",
         "Genre": "Electronic, Rock, Funk / Soul, Stage & Screen",
         "Subgenre": "Pop Rock, Funk, Soundtrack, Synth-pop"
     },
-    {
-        "Price": 99.99,
-        "Year": 1980,
-        "Album": "Back in Black",
-        "Artist": "AC/DC",
-        "Genre": "Rock",
-        "Subgenre": "Hard Rock"
-    },
+    // {
+    //     "Price": 99.99,
+    //     "Year": 1980,
+    //     "Album": "Back In Black",
+    //     "Artist": "AC/DC",
+    //     "Genre": "Rock",
+    //     "Subgenre": "Hard Rock"
+    // },
     {
         "Price": 99.99,
         "Year": 1965,
@@ -666,7 +666,7 @@
     {
         "Price": 99.99,
         "Year": 1967,
-        "Album": "I Never Loved a Man the Way I Love You",
+        "Album": "I Never Loved a Man The Way I Love You",
         "Artist": "Aretha Franklin",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul"
@@ -682,7 +682,7 @@
     {
         "Price": 99.99,
         "Year": 1984,
-        "Album": "Born in the U.S.A.",
+        "Album": "Born In The U.S.A.",
         "Artist": "Bruce Springsteen",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -706,7 +706,7 @@
     {
         "Price": 99.99,
         "Year": 1969,
-        "Album": "Dusty in Memphis",
+        "Album": "Dusty In Memphis",
         "Artist": "Dusty Springfield",
         "Genre": "Rock, Funk / Soul",
         "Subgenre": "Pop Rock, Soul"
@@ -738,7 +738,7 @@
     {
         "Price": 99.99,
         "Year": 1987,
-        "Album": "Sign \"Peace\" the Times",
+        "Album": "Sign \"Peace\" The Times",
         "Artist": "Prince",
         "Genre": "Rock, Reggae",
         "Subgenre": "Ska, Reggae-Pop"
@@ -794,7 +794,7 @@
     {
         "Price": 69.99,
         "Year": 1968,
-        "Album": "Odessey and Oracle",
+        "Album": "Odessey And Oracle",
         "Artist": "The Zombies",
         "Genre": "Rock",
         "Subgenre": "Psychedelic Rock"
@@ -802,7 +802,7 @@
     {
         "Price": 69.99,
         "Year": 1955,
-        "Album": "In the Wee Small Hours",
+        "Album": "In The Wee Small Hours",
         "Artist": "Frank Sinatra",
         "Genre": "Jazz, Pop",
         "Subgenre": "Big Band, Ballad"
@@ -834,7 +834,7 @@
     {
         "Price": 69.99,
         "Year": 1962,
-        "Album": "Modern Sounds in Country and Western Music",
+        "Album": "Modern Sounds In Country And Western Music",
         "Artist": "Ray Charles",
         "Genre": "Funk / Soul, Folk, World, & Country",
         "Subgenre": "Country, Rhythm & Blues"
@@ -842,7 +842,7 @@
     {
         "Price": 69.99,
         "Year": 1977,
-        "Album": "Rocket to Russia",
+        "Album": "Rocket To Russia",
         "Artist": "Ramones",
         "Genre": "Rock",
         "Subgenre": "Rock & Roll, Punk"
@@ -850,7 +850,7 @@
     {
         "Price": 69.99,
         "Year": 2003,
-        "Album": "Portrait of a Legend 1951-1964",
+        "Album": "Portrait Of a Legend 1951-1964",
         "Artist": "Sam Cooke",
         "Genre": "Latin, Funk / Soul",
         "Subgenre": "Soul, Rhythm & Blues, Gospel, Cha-Cha"
@@ -890,15 +890,15 @@
     {
         "Price": 69.99,
         "Year": 1966,
-        "Album": "If You Can Believe Your Eyes and Ears",
-        "Artist": "The Mamas and the Papas",
+        "Album": "If You Can Believe Your Eyes And Ears",
+        "Artist": "The Mamas And The Papas",
         "Genre": "Rock",
         "Subgenre": "Folk Rock, Pop Rock"
     },
     {
         "Price": 69.99,
         "Year": 1974,
-        "Album": "Court and Spark",
+        "Album": "Court And Spark",
         "Artist": "Joni Mitchell",
         "Genre": "Rock",
         "Subgenre": "Soft Rock, Pop Rock"
@@ -922,7 +922,7 @@
     {
         "Price": 69.99,
         "Year": 1965,
-        "Album": "Out of Our Heads",
+        "Album": "Out Of Our Heads",
         "Artist": "The Rolling Stones",
         "Genre": "Rock",
         "Subgenre": "Blues Rock, Rock & Roll"
@@ -930,8 +930,8 @@
     {
         "Price": 69.99,
         "Year": 1970,
-        "Album": "Layla and Other Assorted Love Songs",
-        "Artist": "Derek and the Dominos",
+        "Album": "Layla And Other Assorted Love Songs",
+        "Artist": "Derek And The Dominos",
         "Genre": "Rock",
         "Subgenre": "Blues Rock"
     },
@@ -954,7 +954,7 @@
     {
         "Price": 69.99,
         "Year": 1968,
-        "Album": "Sweetheart of the Rodeo",
+        "Album": "Sweetheart Of The Rodeo",
         "Artist": "The Byrds",
         "Genre": "Rock",
         "Subgenre": "Folk Rock, Country Rock"
@@ -1019,14 +1019,14 @@
         "Price": 44.99,
         "Year": 1973,
         "Album": "Raw Power",
-        "Artist": "Iggy and The Stooges",
+        "Artist": "Iggy And The Stooges",
         "Genre": "Rock",
         "Subgenre": "Garage Rock, Hard Rock, Punk"
     },
     {
         "Price": 44.99,
         "Year": 1980,
-        "Album": "Remain in Light",
+        "Album": "Remain In Light",
         "Artist": "Talking Heads",
         "Genre": "Electronic, Rock",
         "Subgenre": "New Wave, Art Rock, Funk"
@@ -1058,7 +1058,7 @@
     {
         "Price": 44.99,
         "Year": 1973,
-        "Album": "The Wild, the Innocent & the E Street Shuffle",
+        "Album": "The Wild, The Innocent & The E Street Shuffle",
         "Artist": "Bruce Springsteen",
         "Genre": "Rock",
         "Subgenre": "None"
@@ -1066,7 +1066,7 @@
     {
         "Price": 44.99,
         "Year": 1994,
-        "Album": "Ready to Die",
+        "Album": "Ready To Die",
         "Artist": "The Notorious B.I.G.",
         "Genre": "Hip Hop",
         "Subgenre": "Thug Rap"
@@ -1074,7 +1074,7 @@
     {
         "Price": 44.99,
         "Year": 1992,
-        "Album": "Slanted and Enchanted",
+        "Album": "Slanted And Enchanted",
         "Artist": "Pavement",
         "Genre": "Rock",
         "Subgenre": "Alternative Rock"
@@ -1122,7 +1122,7 @@
     {
         "Price": 44.99,
         "Year": 1965,
-        "Album": "Live at the Regal",
+        "Album": "Live At The Regal",
         "Artist": "B.B. King",
         "Genre": "Blues",
         "Subgenre": "Chicago Blues"
@@ -1139,7 +1139,7 @@
         "Price": 44.99,
         "Year": 1968,
         "Album": "Gris-Gris",
-        "Artist": "Dr. John, the Night Tripper",
+        "Artist": "Dr. John, The Night Tripper",
         "Genre": "Jazz, Rock, Funk / Soul, Blues",
         "Subgenre": "Soul-Jazz, Louisiana Blues, Fusion, Bayou Funk"
     },
@@ -1178,7 +1178,7 @@
     {
         "Price": 44.99,
         "Year": 1973,
-        "Album": "Houses of the Holy",
+        "Album": "Houses Of The Holy",
         "Artist": "Led Zeppelin",
         "Genre": "Rock",
         "Subgenre": "Classic Rock"
@@ -1194,7 +1194,7 @@
     {
         "Price": 44.99,
         "Year": 1978,
-        "Album": "Darkness on the Edge of Town",
+        "Album": "Darkness On The Edge Of Town",
         "Artist": "Bruce Springsteen",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -1226,7 +1226,7 @@
     {
         "Price": 44.99,
         "Year": 1958,
-        "Album": "Moanin' in the Moonlight",
+        "Album": "Moanin' In The Moonlight",
         "Artist": "Howlin' Wolf",
         "Genre": "Blues",
         "Subgenre": "Chicago Blues"
@@ -1258,7 +1258,7 @@
     {
         "Price": 44.99,
         "Year": 1975,
-        "Album": "Captain Fantastic and the Brown Dirt Cowboy",
+        "Album": "Captain Fantastic And The Brown Dirt Cowboy",
         "Artist": "Elton John",
         "Genre": "Rock",
         "Subgenre": "Pop Rock, Classic Rock"
@@ -1282,7 +1282,7 @@
     {
         "Price": 44.99,
         "Year": 1968,
-        "Album": "The Dock of the Bay",
+        "Album": "The Dock Of The Bay",
         "Artist": "Otis Redding",
         "Genre": "Funk / Soul",
         "Subgenre": "Rhythm & Blues, Soul"
@@ -1298,7 +1298,7 @@
     {
         "Price": 44.99,
         "Year": 1982,
-        "Album": 1999,
+        "Album": "1999",
         "Artist": "Prince",
         "Genre": "Funk / Soul, Pop",
         "Subgenre": "None"
@@ -1306,7 +1306,7 @@
     {
         "Price": 44.99,
         "Year": 2002,
-        "Album": "The Very Best of Linda Ronstadt",
+        "Album": "The Very Best Of Linda Ronstadt",
         "Artist": "Linda Ronstadt",
         "Genre": "Rock, Pop",
         "Subgenre": "Soft Rock, Pop Rock"
@@ -1330,7 +1330,7 @@
     {
         "Price": 44.99,
         "Year": 1986,
-        "Album": "Master of Puppets",
+        "Album": "Master Of Puppets",
         "Artist": "Metallica",
         "Genre": "Rock",
         "Subgenre": "Thrash, Speed Metal"
@@ -1354,7 +1354,7 @@
     {
         "Price": 44.99,
         "Year": 1970,
-        "Album": "Live at Leeds",
+        "Album": "Live At Leeds",
         "Artist": "The Who",
         "Genre": "Rock",
         "Subgenre": "Classic Rock, Blues Rock, Hard Rock"
@@ -1394,7 +1394,7 @@
     {
         "Price": 44.99,
         "Year": 1970,
-        "Album": "Close to You",
+        "Album": "Close To You",
         "Artist": "Carpenters",
         "Genre": "Rock, Pop",
         "Subgenre": "Pop Rock, Vocal"
@@ -1419,7 +1419,7 @@
         "Price": 44.99,
         "Year": 1992,
         "Album": "The Anthology: 1961-1977",
-        "Artist": "Curtis Mayfield and The Impressions",
+        "Artist": "Curtis Mayfield And The Impressions",
         "Genre": "Funk / Soul",
         "Subgenre": "Rhythm & Blues, Soul, Funk"
     },
@@ -1514,7 +1514,7 @@
     {
         "Price": 44.99,
         "Year": 1969,
-        "Album": "From Elvis in Memphis",
+        "Album": "From Elvis In Memphis",
         "Artist": "Elvis Presley",
         "Genre": "Rock, Funk / Soul, Folk, World, & Country",
         "Subgenre": "Country, Soul"
@@ -1530,7 +1530,7 @@
     {
         "Price": 44.99,
         "Year": 1969,
-        "Album": "The Gilded Palace of Sin",
+        "Album": "The Gilded Palace Of Sin",
         "Artist": "The Flying Burrito Brothers",
         "Genre": "Rock, Folk, World, & Country",
         "Subgenre": "Country Rock"
@@ -1562,7 +1562,7 @@
     {
         "Price": 44.99,
         "Year": 1998,
-        "Album": "Nuggets: Original Artyfacts From the First Psychedelic Era, 1965-1968",
+        "Album": "Nuggets: Original Artyfacts From The First Psychedelic Era, 1965-1968",
         "Artist": "Various Artists",
         "Genre": "Rock",
         "Subgenre": "Garage Rock,�Psychedelic Rock"
@@ -1578,7 +1578,7 @@
     {
         "Price": 99.99,
         "Year": 1967,
-        "Album": "The Best of Little Walter",
+        "Album": "The Best Of Little Walter",
         "Artist": "Little Walter",
         "Genre": "Blues",
         "Subgenre": "Chicago Blues"
@@ -1591,14 +1591,14 @@
         "Genre": "Rock",
         "Subgenre": "Indie Rock"
     },
-    {
-        "Price": 99.99,
-        "Year": 1979,
-        "Album": "Highway to Hell",
-        "Artist": "AC/DC",
-        "Genre": "Rock",
-        "Subgenre": "Hard Rock"
-    },
+    // {
+    //     "Price": 99.99,
+    //     "Year": 1979,
+    //     "Album": "Highway To Hell",
+    //     "Artist": "AC/DC",
+    //     "Genre": "Rock",
+    //     "Subgenre": "Hard Rock"
+    // },
     {
         "Price": 99.99,
         "Year": 1994,
@@ -1610,7 +1610,7 @@
     {
         "Price": 99.99,
         "Year": 1966,
-        "Album": "Parsley, Sage, Rosemary and Thyme",
+        "Album": "Parsley, Sage, Rosemary And Thyme",
         "Artist": "Simon & Garfunkel",
         "Genre": "Rock, Pop, Folk, World, & Country",
         "Subgenre": "Folk Rock, Pop Rock"
@@ -1634,7 +1634,7 @@
     {
         "Price": 99.99,
         "Year": 1968,
-        "Album": "Wheels of Fire",
+        "Album": "Wheels Of Fire",
         "Artist": "Cream",
         "Genre": "Rock, Blues",
         "Subgenre": "Blues Rock, Psychedelic Rock, Classic Rock"
@@ -1658,7 +1658,7 @@
     {
         "Price": 99.99,
         "Year": 1970,
-        "Album": "Tea for the Tillerman",
+        "Album": "Tea for The Tillerman",
         "Artist": "Cat Stevens",
         "Genre": "Rock, Stage & Screen",
         "Subgenre": "Folk Rock, Pop Rock"
@@ -1706,7 +1706,7 @@
     {
         "Price": 99.99,
         "Year": 1991,
-        "Album": "Proud Mary: The Best of Ike and Tina Turner",
+        "Album": "Proud Mary: The Best Of Ike And Tina Turner",
         "Artist": "Ike & Tina Turner",
         "Genre": "Funk / Soul",
         "Subgenre": "Rhythm & Blues, Bayou Funk, Soul"
@@ -1730,7 +1730,7 @@
     {
         "Price": 99.99,
         "Year": 1961,
-        "Album": "Two Steps From the Blues",
+        "Album": "Two Steps From The Blues",
         "Artist": "Bobby \"Blue\" Bland",
         "Genre": "Funk / Soul, Blues",
         "Subgenre": "Rhythm & Blues, Soul"
@@ -1746,7 +1746,7 @@
     {
         "Price": 99.99,
         "Year": 1986,
-        "Album": "Licensed to Ill",
+        "Album": "Licensed To Ill",
         "Artist": "Beastie Boys",
         "Genre": "Hip Hop",
         "Subgenre": "None"
@@ -1818,7 +1818,7 @@
     {
         "Price": 99.99,
         "Year": 1987,
-        "Album": "Paid in Full",
+        "Album": "Paid In Full",
         "Artist": "Eric B. & Rakim",
         "Genre": "Hip Hop",
         "Subgenre": "None"
@@ -1826,7 +1826,7 @@
     {
         "Price": 99.99,
         "Year": 1975,
-        "Album": "Toys in the Attic",
+        "Album": "Toys In The Attic",
         "Artist": "Aerosmith",
         "Genre": "Rock",
         "Subgenre": "Hard Rock, Blues Rock"
@@ -1834,7 +1834,7 @@
     {
         "Price": 99.99,
         "Year": 1989,
-        "Album": "Nick of Time",
+        "Album": "Nick Of Time",
         "Artist": "Bonnie Raitt",
         "Genre": "Rock, Pop",
         "Subgenre": "Blues Rock, Pop Rock"
@@ -1842,7 +1842,7 @@
     {
         "Price": 99.99,
         "Year": 1975,
-        "Album": "A Night at the Opera",
+        "Album": "A Night At The Opera",
         "Artist": "Queen",
         "Genre": "Rock",
         "Subgenre": "Hard Rock, Pop Rock, Prog Rock"
@@ -1963,7 +1963,7 @@
         "Price": 99.99,
         "Year": 1966,
         "Album": "Freak Out!",
-        "Artist": "The Mothers of Invention",
+        "Artist": "The Mothers Of Invention",
         "Genre": "Electronic, Rock",
         "Subgenre": "Musique Concr?te, Avantgarde, Symphonic Rock, Rhythm & Blues, Psychedelic Rock, Experimental, Parody"
     },
@@ -1978,7 +1978,7 @@
     {
         "Price": 99.99,
         "Year": 1959,
-        "Album": "The Shape of Jazz to Come",
+        "Album": "The Shape Of Jazz To Come",
         "Artist": "Ornette Coleman",
         "Genre": "Jazz",
         "Subgenre": "Free Jazz"
@@ -1986,7 +1986,7 @@
     {
         "Price": 99.99,
         "Year": 1992,
-        "Album": "Automatic for the People",
+        "Album": "Automatic for The People",
         "Artist": "R.E.M.",
         "Genre": "Rock",
         "Subgenre": "Alternative Rock"
@@ -2026,7 +2026,7 @@
     {
         "Price": 64.99,
         "Year": 1966,
-        "Album": "Complete & Unbelievable: The Otis Redding Dictionary of Soul",
+        "Album": "Complete & Unbelievable: The Otis Redding Dictionary Of Soul",
         "Artist": "Otis Redding",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul"
@@ -2114,7 +2114,7 @@
     {
         "Price": 64.99,
         "Year": 1959,
-        "Album": "The Genius of Ray Charles",
+        "Album": "The Genius Of Ray Charles",
         "Artist": "Ray Charles",
         "Genre": "Jazz, Pop",
         "Subgenre": "Soul-Jazz, Big Band"
@@ -2122,7 +2122,7 @@
     {
         "Price": 64.99,
         "Year": 1968,
-        "Album": "Child Is Father to the Man",
+        "Album": "Child Is Father To The Man",
         "Artist": "Blood, Sweat & Tears",
         "Genre": "Rock",
         "Subgenre": "Blues Rock, Jazz-Rock, Classic Rock"
@@ -2147,7 +2147,7 @@
         "Price": 65.95,
         "Year": 1985,
         "Album": "Psychocandy",
-        "Artist": "The Jesus and Mary Chain",
+        "Artist": "The Jesus And Mary Chain",
         "Genre": "Rock",
         "Subgenre": "Noise"
     },
@@ -2178,7 +2178,7 @@
     {
         "Price": 65.95,
         "Year": 1966,
-        "Album": "Going to a Go-Go",
+        "Album": "Going To a Go-Go",
         "Artist": "Smokey Robinson & The Miracles",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul"
@@ -2218,7 +2218,7 @@
     {
         "Price": 65.95,
         "Year": 1997,
-        "Album": "Anthology of American Folk Music",
+        "Album": "Anthology Of American Folk Music",
         "Artist": "Various",
         "Genre": "Blues, Folk, World, & Country",
         "Subgenre": "Cajun, Country, Field Recording, Gospel, Delta Blues, Folk"
@@ -2274,7 +2274,7 @@
     {
         "Price": 65.95,
         "Year": 1972,
-        "Album": "Music of My Mind",
+        "Album": "Music Of My Mind",
         "Artist": "Stevie Wonder",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul-Jazz, Soul"
@@ -2282,7 +2282,7 @@
     {
         "Price": 65.95,
         "Year": 1972,
-        "Album": "I'm Still in Love With You",
+        "Album": "I'm Still In Love With You",
         "Artist": "Al Green",
         "Genre": "Funk / Soul",
         "Subgenre": "Rhythm & Blues, Soul"
@@ -2298,7 +2298,7 @@
     {
         "Price": 65.95,
         "Year": 1968,
-        "Album": "Anthem of the Sun",
+        "Album": "Anthem Of The Sun",
         "Artist": "Grateful Dead",
         "Genre": "Rock",
         "Subgenre": "Psychedelic Rock"
@@ -2331,7 +2331,7 @@
         "Price": 65.95,
         "Year": 1975,
         "Album": "The Basement Tapes",
-        "Artist": "Bob Dylan and the Band",
+        "Artist": "Bob Dylan And The Band",
         "Genre": "Rock",
         "Subgenre": "Folk Rock, Country Rock, Classic Rock"
     },
@@ -2346,7 +2346,7 @@
     {
         "Price": 65.95,
         "Year": 1969,
-        "Album": "Kick Out the Jams",
+        "Album": "Kick Out The Jams",
         "Artist": "MC5",
         "Genre": "Rock",
         "Subgenre": "Garage Rock, Hard Rock, Punk, Blues Rock"
@@ -2354,7 +2354,7 @@
     {
         "Price": 65.95,
         "Year": 1970,
-        "Album": "Songs of Love and Hate",
+        "Album": "Songs Of Love And Hate",
         "Artist": "Leonard Cohen",
         "Genre": "Folk, World, & Country",
         "Subgenre": "Folk Rock, Folk, Ballad"
@@ -2370,8 +2370,8 @@
     {
         "Price": 65.95,
         "Year": 1968,
-        "Album": "We're Only in It for the Money",
-        "Artist": "The Mothers of Invention",
+        "Album": "We're Only In It for The Money",
+        "Artist": "The Mothers Of Invention",
         "Genre": "Electronic, Rock",
         "Subgenre": "Modern Classical, Avantgarde, Psychedelic Rock, Experimental, Parody"
     },
@@ -2394,7 +2394,7 @@
     {
         "Price": 65.95,
         "Year": 1971,
-        "Album": "Master of Reality",
+        "Album": "Master Of Reality",
         "Artist": "Black Sabbath",
         "Genre": "Rock",
         "Subgenre": "Hard Rock, Heavy Metal"
@@ -2402,7 +2402,7 @@
     {
         "Price": 65.95,
         "Year": 1971,
-        "Album": "Coat of Many Colors",
+        "Album": "Coat Of Many Colors",
         "Artist": "Dolly Parton",
         "Genre": "Folk, World, & Country",
         "Subgenre": "Country"
@@ -2410,7 +2410,7 @@
     {
         "Price": 65.95,
         "Year": 1990,
-        "Album": "Fear of a Black Planet",
+        "Album": "Fear Of a Black Planet",
         "Artist": "Public Enemy",
         "Genre": "Hip Hop",
         "Subgenre": "Conscious"
@@ -2434,7 +2434,7 @@
     {
         "Price": 55.95,
         "Year": 1998,
-        "Album": "Car Wheels on a Gravel Road",
+        "Album": "Car Wheels On a Gravel Road",
         "Artist": "Lucinda Williams",
         "Genre": "Folk, World, & Country",
         "Subgenre": "Country, Folk"
@@ -2466,7 +2466,7 @@
     {
         "Price": 55.95,
         "Year": 1969,
-        "Album": "Willy and the Poor Boys",
+        "Album": "Willy And The Poor Boys",
         "Artist": "Creedence Clearwater Revival",
         "Genre": "Rock",
         "Subgenre": "Blues Rock, Rock & Roll, Classic Rock"
@@ -2498,7 +2498,7 @@
     {
         "Price": 55.95,
         "Year": 1994,
-        "Album": "MTV Unplugged in New York",
+        "Album": "MTV Unplugged In New York",
         "Artist": "Nirvana",
         "Genre": "Rock",
         "Subgenre": "Folk Rock, Acoustic, Grunge"
@@ -2506,7 +2506,7 @@
     {
         "Price": 55.95,
         "Year": 1998,
-        "Album": "The Miseducation of Lauryn Hill",
+        "Album": "The Miseducation Of Lauryn Hill",
         "Artist": "Lauryn Hill",
         "Genre": "Hip Hop",
         "Subgenre": "RnB/Swing, Conscious"
@@ -2514,8 +2514,8 @@
     {
         "Price": 55.95,
         "Year": 1979,
-        "Album": "Damn the Torpedoes",
-        "Artist": "Tom Petty and the Heartbreakers",
+        "Album": "Damn The Torpedoes",
+        "Artist": "Tom Petty And The Heartbreakers",
         "Genre": "Rock",
         "Subgenre": "Soft Rock, Hard Rock, Pop Rock"
     },
@@ -2578,7 +2578,7 @@
     {
         "Price": 55.95,
         "Year": 1981,
-        "Album": "Ghost in the Machine",
+        "Album": "Ghost In The Machine",
         "Artist": "The Police",
         "Genre": "Rock, Pop",
         "Subgenre": "Alternative Rock, New Wave, Pop Rock"
@@ -2586,7 +2586,7 @@
     {
         "Price": 55.95,
         "Year": 1976,
-        "Album": "Station to Station",
+        "Album": "Station To Station",
         "Artist": "David Bowie",
         "Genre": "Rock, Funk / Soul",
         "Subgenre": "Classic Rock, Soul, Funk, Art Rock"
@@ -2610,7 +2610,7 @@
     {
         "Price": 55.95,
         "Year": 1993,
-        "Album": "Exile in Guyville",
+        "Album": "Exile In Guyville",
         "Artist": "Liz Phair",
         "Genre": "Rock",
         "Subgenre": "Lo-Fi, Indie Rock"
@@ -2626,7 +2626,7 @@
     {
         "Price": 55.95,
         "Year": 1986,
-        "Album": "In the Jungle Groove",
+        "Album": "In The Jungle Groove",
         "Artist": "James Brown",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul, Funk"
@@ -2634,7 +2634,7 @@
     {
         "Price": 55.95,
         "Year": 1975,
-        "Album": "Tonight's the Night",
+        "Album": "Tonight's The Night",
         "Artist": "Neil Young",
         "Genre": "Rock",
         "Subgenre": "Blues Rock, Folk Rock, Classic Rock"
@@ -2650,7 +2650,7 @@
     {
         "Price": 55.95,
         "Year": 1982,
-        "Album": "Shoot Out the Lights",
+        "Album": "Shoot Out The Lights",
         "Artist": "Richard & Linda Thompson",
         "Genre": "Rock, Folk, World, & Country",
         "Subgenre": "Folk Rock"
@@ -2699,14 +2699,14 @@
         "Price": 55.95,
         "Year": 1968,
         "Album": "Cheap Thrills",
-        "Artist": "Big Brother & the Holding Company",
+        "Artist": "Big Brother & The Holding Company",
         "Genre": "Rock",
         "Subgenre": "Folk Rock, Blues Rock, Psychedelic Rock"
     },
     {
         "Price": 55.95,
         "Year": 1974,
-        "Album": "The Heart of Saturday Night",
+        "Album": "The Heart Of Saturday Night",
         "Artist": "Tom Waits",
         "Genre": "Jazz, Pop, Folk, World, & Country",
         "Subgenre": "Contemporary Jazz, Spoken Word"
@@ -2738,7 +2738,7 @@
     {
         "Price": 55.95,
         "Year": 1977,
-        "Album": "Bat Out of Hell",
+        "Album": "Bat Out Of Hell",
         "Artist": "Meat Loaf",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -2762,7 +2762,7 @@
     {
         "Price": 55.95,
         "Year": 1989,
-        "Album": "3 Feet High and Rising",
+        "Album": "3 Feet High And Rising",
         "Artist": "De La Soul",
         "Genre": "Hip Hop",
         "Subgenre": "None"
@@ -2770,7 +2770,7 @@
     {
         "Price": 55.95,
         "Year": 1967,
-        "Album": "The Piper at the Gates of Dawn",
+        "Album": "The Piper At The Gates Of Dawn",
         "Artist": "Pink Floyd",
         "Genre": "Rock",
         "Subgenre": "Psychedelic Rock"
@@ -2778,7 +2778,7 @@
     {
         "Price": 55.95,
         "Year": 1960,
-        "Album": "Muddy Waters at Newport 1960",
+        "Album": "Muddy Waters At Newport 1960",
         "Artist": "Muddy Waters",
         "Genre": "Rock, Blues",
         "Subgenre": "Blues Rock, Chicago Blues"
@@ -2794,7 +2794,7 @@
     {
         "Price": 55.95,
         "Year": 1966,
-        "Album": "Roger the Engineer",
+        "Album": "Roger The Engineer",
         "Artist": "The Yardbirds",
         "Genre": "Rock, Blues",
         "Subgenre": "Blues Rock, Pop Rock"
@@ -2810,7 +2810,7 @@
     {
         "Price": 55.95,
         "Year": 1985,
-        "Album": "Brothers in Arms",
+        "Album": "Brothers In Arms",
         "Artist": "Dire Straits",
         "Genre": "Rock",
         "Subgenre": "AOR, Classic Rock"
@@ -2850,7 +2850,7 @@
     {
         "Price": 55.95,
         "Year": 1967,
-        "Album": "Between the Buttons",
+        "Album": "Between The Buttons",
         "Artist": "The Rolling Stones",
         "Genre": "Rock",
         "Subgenre": "Blues Rock, Psychedelic Rock, Pop Rock"
@@ -2858,7 +2858,7 @@
     {
         "Price": 55.95,
         "Year": 1960,
-        "Album": "Sketches of Spain",
+        "Album": "Sketches Of Spain",
         "Artist": "Miles Davis",
         "Genre": "Jazz",
         "Subgenre": "Modal"
@@ -2914,8 +2914,8 @@
     {
         "Price": 55.95,
         "Year": 1992,
-        "Album": "Rage Against the Machine",
-        "Artist": "Rage Against the Machine",
+        "Album": "Rage Against The Machine",
+        "Artist": "Rage Against The Machine",
         "Genre": "Hip Hop, Rock",
         "Subgenre": "Funk Metal"
     },
@@ -2930,7 +2930,7 @@
     {
         "Price": 39.95,
         "Year": 1998,
-        "Album": "Ray of Light",
+        "Album": "Ray Of Light",
         "Artist": "Madonna",
         "Genre": "Electronic, Pop",
         "Subgenre": "House, Techno, Downtempo, Vocal, Ambient"
@@ -2955,7 +2955,7 @@
         "Price": 39.95,
         "Year": 1973,
         "Album": "Mott",
-        "Artist": "Mott the Hoople",
+        "Artist": "Mott The Hoople",
         "Genre": "Rock",
         "Subgenre": "Classic Rock"
     },
@@ -2994,7 +2994,7 @@
     {
         "Price": 39.95,
         "Year": 1974,
-        "Album": "Late for the Sky",
+        "Album": "Late for The Sky",
         "Artist": "Jackson Browne",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -3018,7 +3018,7 @@
     {
         "Price": 39.95,
         "Year": 1995,
-        "Album": "(What's the Story) Morning Glory?",
+        "Album": "(What's The Story) Morning Glory?",
         "Artist": "Oasis",
         "Genre": "Rock, Pop",
         "Subgenre": "Brit Pop"
@@ -3058,7 +3058,7 @@
     {
         "Price": 39.95,
         "Year": 1978,
-        "Album": "More Songs About Buildings and Food",
+        "Album": "More Songs About Buildings And Food",
         "Artist": "Talking Heads",
         "Genre": "Rock",
         "Subgenre": "New Wave, Indie Rock"
@@ -3074,7 +3074,7 @@
     {
         "Price": 39.95,
         "Year": 2001,
-        "Album": "\"Love and Theft\"",
+        "Album": "\"Love And Theft\"",
         "Artist": "Bob Dylan",
         "Genre": "Rock",
         "Subgenre": "Folk Rock, Blues Rock"
@@ -3090,7 +3090,7 @@
     {
         "Price": 39.95,
         "Year": 1993,
-        "Album": "Enter the Wu_Tang: 36 Chambers",
+        "Album": "Enter The Wu_Tang: 36 Chambers",
         "Artist": "Wu Tang Clan",
         "Genre": "Hip Hop",
         "Subgenre": "Gangsta"
@@ -3098,7 +3098,7 @@
     {
         "Price": 39.95,
         "Year": 1985,
-        "Album": "The Indestructible Beat of Soweto",
+        "Album": "The Indestructible Beat Of Soweto",
         "Artist": "Various Artists",
         "Genre": "Funk / Soul,�Folk, World, & Country",
         "Subgenre": "African"
@@ -3106,7 +3106,7 @@
     {
         "Price": 39.95,
         "Year": 1989,
-        "Album": "The End of the Innocence",
+        "Album": "The End Of The Innocence",
         "Artist": "Don Henley",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -3154,7 +3154,7 @@
     {
         "Price": 39.95,
         "Year": 2007,
-        "Album": "Sound of Silver",
+        "Album": "Sound Of Silver",
         "Artist": "LCD Soundsystem",
         "Genre": "Electronic, Rock",
         "Subgenre": "Leftfield, Alternative Rock, Electro, Disco"
@@ -3194,7 +3194,7 @@
     {
         "Price": 39.95,
         "Year": 1995,
-        "Album": "Anthology: The Best of The Temptations",
+        "Album": "Anthology: The Best Of The Temptations",
         "Artist": "The Temptations",
         "Genre": "Electronic, Funk / Soul",
         "Subgenre": "Soul, Disco"
@@ -3242,7 +3242,7 @@
     {
         "Price": 39.95,
         "Year": 1993,
-        "Album": "Rid of Me",
+        "Album": "Rid Of Me",
         "Artist": "PJ Harvey",
         "Genre": "Rock",
         "Subgenre": "Indie Rock"
@@ -3274,7 +3274,7 @@
     {
         "Price": 159.99,
         "Year": 1997,
-        "Album": "Time Out of Mind",
+        "Album": "Time Out Of Mind",
         "Artist": "Bob Dylan",
         "Genre": "Rock, Blues",
         "Subgenre": "Blues Rock"
@@ -3298,7 +3298,7 @@
     {
         "Price": 159.99,
         "Year": 1984,
-        "Album": "Double Nickels on the Dime",
+        "Album": "Double Nickels On The Dime",
         "Artist": "Minutemen",
         "Genre": "Rock",
         "Subgenre": "Alternative Rock, Hardcore, Punk"
@@ -3306,7 +3306,7 @@
     {
         "Price": 159.99,
         "Year": 1981,
-        "Album": "Beauty and the Beat",
+        "Album": "Beauty And The Beat",
         "Artist": "The Go Go's",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -3338,7 +3338,7 @@
     {
         "Price": 159.99,
         "Year": 1973,
-        "Album": "Band on the Run",
+        "Album": "Band On The Run",
         "Artist": "Paul McCartney & Wings",
         "Genre": "Rock",
         "Subgenre": "Pop Rock"
@@ -3362,7 +3362,7 @@
     {
         "Price": 159.99,
         "Year": 1990,
-        "Album": "The Best of the Girl Groups, Volume 1",
+        "Album": "The Best Of The Girl Groups, Volume 1",
         "Artist": "Various Artists",
         "Genre": "Rock,�Pop",
         "Subgenre": "Pop Rock, Vocal"
@@ -3370,7 +3370,7 @@
     {
         "Price": 159.99,
         "Year": 1963,
-        "Album": "Presenting the Fabulous Ronettes Featuring Veronica",
+        "Album": "Presenting The Fabulous Ronettes Featuring Veronica",
         "Artist": "The Ronettes",
         "Genre": "Rock, Pop",
         "Subgenre": "Rock & Roll, Vocal"
@@ -3402,7 +3402,7 @@
     {
         "Price": 159.99,
         "Year": 1978,
-        "Album": "Cheap Trick at Budokan",
+        "Album": "Cheap Trick At Budokan",
         "Artist": "Cheap Trick",
         "Genre": "Rock",
         "Subgenre": "Power Pop, Pop Rock, Arena Rock, Hard Rock"
@@ -3442,7 +3442,7 @@
     {
         "Price": 159.99,
         "Year": 2000,
-        "Album": "Stories From the City, Stories From the Sea",
+        "Album": "Stories From The City, Stories From The Sea",
         "Artist": "PJ Harvey",
         "Genre": "Rock",
         "Subgenre": "Indie Rock"
@@ -3450,7 +3450,7 @@
     {
         "Price": 159.99,
         "Year": 1973,
-        "Album": "Here Come the Warm Jets",
+        "Album": "Here Come The Warm Jets",
         "Artist": "Brian Eno",
         "Genre": "Rock",
         "Subgenre": "Art Rock, Glam"
@@ -3506,7 +3506,7 @@
     {
         "Price": 89.99,
         "Year": 1985,
-        "Album": "Live at the Harlem Square Club, 1963",
+        "Album": "Live At The Harlem Square Club, 1963",
         "Artist": "Sam Cooke",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul"
@@ -3514,7 +3514,7 @@
     {
         "Price": 89.99,
         "Year": 1985,
-        "Album": "Rum Sodomy & the Lash",
+        "Album": "Rum Sodomy & The Lash",
         "Artist": "The Pogues",
         "Genre": "Rock, Folk, World, & Country",
         "Subgenre": "Folk Rock, Celtic, Punk"
@@ -3562,7 +3562,7 @@
     {
         "Price": 89.99,
         "Year": 1970,
-        "Album": "Back in the USA",
+        "Album": "Back In The USA",
         "Artist": "MC5",
         "Genre": "Rock",
         "Subgenre": "Garage Rock, Rock & Roll"
@@ -3602,7 +3602,7 @@
     {
         "Price": 89.99,
         "Year": 2006,
-        "Album": "Back to Black",
+        "Album": "Back To Black",
         "Artist": "Amy Winehouse",
         "Genre": "Funk / Soul, Pop",
         "Subgenre": "Soul"
@@ -3626,7 +3626,7 @@
     {
         "Price": 89.99,
         "Year": 1971,
-        "Album": "Love It to Death",
+        "Album": "Love It To Death",
         "Artist": "Alice Cooper",
         "Genre": "Rock",
         "Subgenre": "Classic Rock"
@@ -3634,7 +3634,7 @@
     {
         "Price": 89.99,
         "Year": 1984,
-        "Album": "How Will the Wolf Survive?",
+        "Album": "How Will The Wolf Survive?",
         "Artist": "Los Lobos",
         "Genre": "Rock, Latin",
         "Subgenre": "Blues Rock"
@@ -3699,7 +3699,7 @@
         "Price": 89.99,
         "Year": 1981,
         "Album": "Heaven Up Here",
-        "Artist": "Echo and The Bunnymen",
+        "Artist": "Echo And The Bunnymen",
         "Genre": "Rock",
         "Subgenre": "New Wave, Indie Rock"
     },
@@ -3722,7 +3722,7 @@
     {
         "Price": 89.99,
         "Year": 2002,
-        "Album": "A Rush of Blood to the Head",
+        "Album": "A Rush Of Blood To The Head",
         "Artist": "Coldplay",
         "Genre": "Rock",
         "Subgenre": "Alternative Rock, Pop Rock"
@@ -3730,7 +3730,7 @@
     {
         "Price": 89.99,
         "Year": 1987,
-        "Album": "Tunnel of Love",
+        "Album": "Tunnel Of Love",
         "Artist": "Bruce Springsteen",
         "Genre": "Rock",
         "Subgenre": "None"
@@ -3762,7 +3762,7 @@
     {
         "Price": 89.99,
         "Year": 1974,
-        "Album": "I Want to See the Bright Lights Tonight",
+        "Album": "I Want To See The Bright Lights Tonight",
         "Artist": "Richard & Linda Thompson",
         "Genre": "Rock",
         "Subgenre": "Classic Rock, Folk Rock"
@@ -3859,15 +3859,15 @@
         "Price": 89.99,
         "Year": 1979,
         "Album": "Entertainment!",
-        "Artist": "Gang of Four",
+        "Artist": "Gang Of Four",
         "Genre": "Rock",
         "Subgenre": "Post-Punk, New Wave"
     },
     {
         "Price": 89.99,
         "Year": 1972,
-        "Album": "All the Young Dudes",
-        "Artist": "Mott the Hoople",
+        "Album": "All The Young Dudes",
+        "Artist": "Mott The Hoople",
         "Genre": "Rock",
         "Subgenre": "Classic Rock, Glam"
     },
@@ -3882,7 +3882,7 @@
     {
         "Price": 89.99,
         "Year": 1975,
-        "Album": "That's the Way of the World",
+        "Album": "That's The Way Of The World",
         "Artist": "Earth, Wind & Fire",
         "Genre": "Funk / Soul",
         "Subgenre": "Soul, Funk, Disco"
@@ -3986,7 +3986,7 @@
     {
         "Price": 89.99,
         "Year": 1971,
-        "Album": "Live in Cook County Jail",
+        "Album": "Live In Cook County Jail",
         "Artist": "B.B. King",
         "Genre": "Blues",
         "Subgenre": "Electric Blues"

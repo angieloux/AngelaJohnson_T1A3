@@ -1,0 +1,2 @@
+class GamesDepartment
+end

@@ -1,7 +1,7 @@
 require "json"
 require_relative "department"
 require "tty-prompt"
-require "tabulo"
+# require 'activesupport'
 
 class VinylDepartment < Department
   def initialize
@@ -13,20 +13,23 @@ class VinylDepartment < Department
 
   def display_records
     @cat_no += 1
-    puts "Catalogue number: #{@cat_no}\n" +
+    puts "Catalogue number: #{@cat_no}\n" +      # hardcode cat numbers?
            "ALBUM: #{@record["Album"]}\n" +
            "ARTIST: #{@record["Artist"]}\n" +
            "YEAR: #{@record["Year"]}\n" +
+           "GENRE: #{@record["Genre"]}\n" +
+           "SUBGENRE: #{@record["Subgenre"]}\n" +
            "PRICE $#{@record["Price"]}\n" +
            "=========================="
   end
 
   def filter_products(filter_choice)
-    system "clear"
+    system("clear")
     case filter_choice
     when 1
       puts "What genre are you looking for?"
-      genre = gets.capitalize.chomp
+      genre = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
+      system 'clear'
       for @record in @stock
         if @record["Genre"] == genre || @record["Subgenre"].include?(genre)
           display_records
@@ -34,7 +37,9 @@ class VinylDepartment < Department
       end
     when 2
       puts "What artist are you looking for?"
-      artist = gets.capitalize.chomp
+      artist = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
+      system 'clear'
+      p artist
       for @record in @stock
         if @record["Artist"].include?(artist)
             display_records
@@ -42,17 +47,18 @@ class VinylDepartment < Department
       end
     when 3
       puts "What album are you looking for? (keywords are ok!)"
-      title = gets.capitalize.chomp
+      title = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
+      system 'clear'
       for @record in @stock
         if @record["Album"].include?(title)
-            display_records
-        else
-          puts "Seems like there's nothing by that name. I guess I can try again"
+          display_records
         end
       end
+      
     when 4
       puts "Whats the max you're willing to pay for a record?"
       price = gets.to_i
+      system 'clear'
       for @record in @stock
         if @record["Price"] <= price
             display_records
@@ -71,10 +77,6 @@ class VinylDepartment < Department
       menu.choice "Go back", 6
     end
     filter_products(input)
-    # for album in @stock
-    #     # prints all values with key album in array of hashes
-    #     puts album["Album"]
-    # end
 
   end
 end
