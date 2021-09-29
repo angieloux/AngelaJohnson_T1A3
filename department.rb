@@ -16,6 +16,13 @@ class Department
 
     def display_cart
         puts @cart
+        if @prompt.yes?("Want to remove anything?")
+            remove_items_from_cart
+        else 
+            system 'clear'
+            display_menu
+        end
+
     end
 
     def add_items_to_cart
@@ -38,10 +45,26 @@ class Department
                 end
             end
             display_menu
+    end
+    
+    def remove_items_from_cart
+        finished = false
+        puts "Type a catalogue number to remove the item from your cart."
+        while !finished
+                product_selection = gets.chomp
+                if item = @cart.detect{|item| item["Catno"] == product_selection} 
+                    @cart.delete(item)
+                    puts "With a small tear falling down your cheek, you realise you are a broke student and you can't afford the nice things in life. You sadly put #{item["Artist"]}'s - #{item["Album"]} back on the shelf."
+                else 
+                    system 'clear'
+                    puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again:\n\n"
+                    display_cart
+                end
+                finished = @prompt.yes?('Done?')
         end
-          # gets = @cat_no
-          # add_items_to_cart(cat_no)
-        
+        system 'clear'
+        display_menu
+    end
     
 
     def pay_for_item
