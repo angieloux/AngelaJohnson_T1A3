@@ -1,12 +1,17 @@
 # require_relative 'vinyl_department'
+require "tty-table"
 
 class Department 
     #all Departments will have this data. 
-    attr_reader :stock
+    attr_reader :stock, :total
     attr_accessor :cart
 
     def initialize 
         @stock = stock
+        @headings = []
+        @cart = cart 
+        @prompt = TTY::Prompt.new
+        @total = total 
     end
 
     def display_menu
@@ -15,7 +20,16 @@ class Department
     end
 
     def display_cart
-        puts @cart
+        rows = []
+        @total = @products.sum{|item| item["Price"]}
+        headings = ["Catno", "Album", "Artist", "Year", "Price", "Console"]
+        # puts @cart
+        @stock.each do |i|
+            rows << ["#{i["Catno"]}", "#{i["Album"]}", "#{i["Artist"]}", "#{i["Year"]}", "$#{i["Price"]}"]
+        end
+        
+        table = Terminal::Table.new :title => "Example", :headings => headings, :rows => rows, :style => {:all_separators => true}
+        puts "#{table} \n"
         if @prompt.yes?("Want to remove anything?")
             remove_items_from_cart
         else 
@@ -38,6 +52,10 @@ class Department
                 for item in @stock
                     if item["Catno"] == product_selection
                     @cart << item
+                    p @cart
+                    # table = TTY:Table.new(@cart)
+                    # renderer = TTY::Table::Renderer::Unicode.new(table)
+                    # renderer.render
                     end
             end
                 if product_selection.to_i > 498
@@ -65,7 +83,6 @@ class Department
         system 'clear'
         display_menu
     end
-    
 
     def pay_for_item
     end

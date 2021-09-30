@@ -10,8 +10,10 @@ require_relative "vinyl_department"
 require_relative "toys_department"
 require_relative "games_department"
 require_relative "listening_station_department"
+require_relative "counter_department"
 
 # create instance of all Departments
+@counter_department = CounterDepartment.new
 department = Department.new
 @vinyl_department = VinylDepartment.new
 @toys_department = ToysDepartment.new
@@ -37,7 +39,7 @@ def choose_department(choice)
   when 4
     @toys_department.display_menu
   when 5
-    @counter_department.display_menu
+    @counter_department.go_to_counter
   when 6
     exit
   end

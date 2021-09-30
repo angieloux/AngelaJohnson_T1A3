@@ -26,7 +26,7 @@ class VinylDepartment < Department
     "=========================="
   end
 
-  def filter_products(filter_choice)
+  def filter_records(filter_choice)
     system("clear")
     case filter_choice
 
@@ -101,7 +101,7 @@ class VinylDepartment < Department
       menu.choice "View your cart", 5
       menu.choice "Go back", 6
     end
-    filter_products(input)
+    filter_records(input)
 
   end
 end
