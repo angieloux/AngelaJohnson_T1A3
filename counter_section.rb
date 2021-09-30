@@ -25,7 +25,7 @@ class CounterSection < Store
     pay = @prompt.yes?("Your total comes to $#{@@cart_total}, please! Did you want to go ahead and pay?".light_magenta)
       if !pay 
         system 'clear' 
-        puts "No worries, come back once you're ready! (Please don't leave the store without paying...)"
+        puts "No worries, come back once you're ready! (Please don't leave the store without paying...)".light_magenta
         look_around
       else 
         system 'clear'

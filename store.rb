@@ -24,37 +24,41 @@ class Store
             puts "You dope. You don't have anything yet.... ".red
             look_around
         else 
+            system 'clear'
+            puts "***************************************\n"
             for vinyl in @@cart 
               puts "#{vinyl["Catno"]}: ".magenta + "#{vinyl["Artist"]} - #{vinyl["Album"]} (#{vinyl["Year"]}) " + "$#{vinyl["Price"]}".yellow
             end
+            puts "***************************************\n"
           end
         # display_records_in_cart
-        remove = @prompt.yes?("Want to remove anything?")
+        remove = @prompt.yes?("Records...nom nom nom. Do I need to change anything?".green)
             if remove 
                 remove_items_from_cart
             else 
                 system 'clear'
-                @@vinyl_section.display_menu
+                look_around
             end
     end
 
     def add_items_to_cart
         add_more = true
             while add_more
-                add_more = @prompt.yes?("Should you put something in your cart?")
+                add_more = @prompt.yes?("Should I add anything from here? If not, I can search again.....".green)
                     if !add_more
                         system 'clear'
                         break
                     end
-                puts "Type a catalogue number to add the item to your cart."
+                puts "Typing the record's " + "CATALOGUE # ".light_magenta + "should do it."
                 product_selection = gets.chomp
                 for item in @stock
                     if item["Catno"] == product_selection
                     @@cart << item
+                    puts "[You stash #{item["Artist"]}'s - #{item["Album"]} in your cart.]\n".blue
                     end
             end
                 if product_selection.to_i > 498
-                    puts "Errr that must have been wrong, let's try that again."
+                    puts "Errr that catalogue number must have been wrong, let's try that again."
                 end
             end
             display_menu
@@ -69,14 +73,13 @@ class Store
                     @@cart.delete(item)
                     system 'clear'
                     puts "[You put #{item["Artist"]}'s - #{item["Album"]} back on the shelf.]\n".green
-                    display_cart
                 else 
                     system 'clear'
-                    puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again:\n"
+                    puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again. They're probably the ones written in " + "purple..\n".light_magenta
                     puts
                     display_cart
                 end
-                finished = @prompt.yes?('Done?')
+                finished = @prompt.yes?('Should I remove anything else?')
         end
         system 'clear'
         display_menu

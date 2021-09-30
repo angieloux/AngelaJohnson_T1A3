@@ -13,7 +13,7 @@ class VinylSection < Store
   end
 
   def display_filtered_records
-    puts "CATALOGUE #: #{@record["Catno"]}\n" +
+    puts "CATALOGUE #: #{@record["Catno"]}\n"+
     "ALBUM: #{@record["Album"]}\n" +
     "ARTIST: #{@record["Artist"]}\n" +
     "YEAR: #{@record["Year"]}\n" +
