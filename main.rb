@@ -23,12 +23,14 @@ require_relative "counter_department"
 # create tty-prompt and artii instances
 @prompt = TTY::Prompt.new
 store_name = Artii::Base.new
+@store_name = store_name.asciify("AJ's Records!")
+system 'clear'
 
 def choose_department(choice) 
   system "clear"
   puts "\n・・・～～～～～ᕕ( ᐛ )ᕗ" # imitate the visitor walking
   progressbar = ProgressBar.create
-  10.times { progressbar.increment; sleep 0.20 }
+  10.times { progressbar.increment; sleep 0.01 }
   case choice
   when 1
     @@vinyl_department.display_menu
@@ -47,6 +49,8 @@ def choose_department(choice)
 end
 
 def look_around
+  system 'clear'
+  puts @store_name
   input = @prompt.select("Where do you want to go?") do |menu|
     menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
     menu.choice "Have a boogie over at the " + "LISTENING STATION".blue, 2
@@ -58,7 +62,7 @@ def look_around
   choose_department(input)
 end
 
-puts store_name.asciify("AJ's Records!")
+puts @store_name
 puts "You arrive at a swanky looking retro record store. " +
        "The aisles are lined with hundreds of records, CDs, games, comic books.... " +
        "the walls are covered in posters and memorabilia, there are a million pop vinyl and other toys staring directly at you. " +

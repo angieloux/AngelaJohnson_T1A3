@@ -4,22 +4,21 @@ require "tty-prompt"
 
 class VinylDepartment < Department
   attr_reader :record
+  
   def initialize
     super 
     file = File.read("vinyl.json")
     @stock = JSON.parse(file)
     @record = record
-    @cart = []
   end
 
   def display_records_in_cart
-    for vinyl in @cart 
+    for vinyl in @@cart 
         puts "#{vinyl["Catno"]}: ".magenta + "#{vinyl["Artist"]} - #{vinyl["Album"]} (#{vinyl["Year"]}) " + "$#{vinyl["Price"]}".yellow
     end
   end
 
-  def display_records
-    # @cat_no += 1
+  def display_filtered_records
     puts "CATALOGUE #: #{@record["Catno"]}\n" +
     "ALBUM: #{@record["Album"]}\n" +
     "ARTIST: #{@record["Artist"]}\n" +
@@ -33,7 +32,6 @@ class VinylDepartment < Department
   def filter_records(filter_choice)
     system("clear")
     case filter_choice
-
     # BY GENRE **********
     when 1
       puts "What genre are you looking for?"
@@ -41,7 +39,7 @@ class VinylDepartment < Department
       system 'clear'
       for @record in @stock
         if @record["Genre"] == genre || @record["Subgenre"].include?(genre)
-          display_records
+          display_filtered_records
         end
       end
       add_items_to_cart
@@ -55,7 +53,7 @@ class VinylDepartment < Department
       p artist
       for @record in @stock
         if @record["Artist"].include?(artist)
-            display_records
+            display_filtered_records
         end
         
       end
@@ -68,7 +66,7 @@ class VinylDepartment < Department
       system 'clear'
       for @record in @stock
         if @record["Album"].include?(title)
-          display_records
+          display_filtered_records
         end
       end
       add_items_to_cart
@@ -80,7 +78,7 @@ class VinylDepartment < Department
       system 'clear'
       for @record in @stock
         if @record["Price"] <= price
-            display_records
+            display_filtered_records
         end
       end
       add_items_to_cart

@@ -2,15 +2,15 @@ require "terminal-table"
 
 class Department 
     #all Departments will have this data. 
-    attr_reader :stock, :total
-    attr_accessor :cart
+    attr_reader :stock
+    attr_accessor :cart, :cart_total
 
     def initialize 
         @stock = stock
         @headings = []
-        @cart = [] 
         @prompt = TTY::Prompt.new
-        @total = total 
+        @@cart = [] 
+        @@cart_total = cart_total
     end
 
     def display_menu
@@ -21,24 +21,12 @@ class Department
     def display_cart
         puts "You look in your cart..." 
         display_records_in_cart
-        # puts @cart
-        # rows = []
-        # @total = @products.sum{|item| item["Price"]}
-        # headings = ["Catno", "Album", "Artist", "Year", "Price", "Console"]
-        # # puts @cart
-        # @stock.each do |i|
-        #     rows << ["#{i["Catno"]}", "#{i["Album"]}", "#{i["Artist"]}", "#{i["Year"]}", "$#{i["Price"]}"]
-        # end
-        
-        # table = Terminal::Table.new :title => "Example", :headings => headings, :rows => rows, :style => {:all_separators => true}
-        # puts "#{table} \n"
         if @prompt.yes?("Want to remove anything?")
             remove_items_from_cart
         else 
             system 'clear'
             display_menu
         end
-
     end
 
     def add_items_to_cart
@@ -53,11 +41,7 @@ class Department
                 product_selection = gets.chomp
                 for item in @stock
                     if item["Catno"] == product_selection
-                    @cart << item
-                    p @cart
-                    # table = TTY:Table.new(@cart)
-                    # renderer = TTY::Table::Renderer::Unicode.new(table)
-                    # renderer.render
+                    @@cart << item
                     end
             end
                 if product_selection.to_i > 498
@@ -72,8 +56,8 @@ class Department
         puts "Type the " + "catalogue number ".magenta + "to remove the item from your cart."
         while !finished
                 product_selection = gets.chomp
-                if item = @cart.detect{|item| item["Catno"] == product_selection} 
-                    @cart.delete(item)
+                if item = @@cart.detect{|item| item["Catno"] == product_selection} 
+                    @@cart.delete(item)
                     puts "With a small tear falling down your cheek, you realise you are a broke student and you can't afford the nice things in life. You sadly put #{item["Artist"]}'s - #{item["Album"]} back on the shelf."
                 else 
                     system 'clear'
@@ -85,17 +69,9 @@ class Department
         system 'clear'
         display_menu
     end
-
-    def pay_for_item
+    def total_cost_of_cart
+        @@cart_total = @@cart.sum{|item| item["Price"]}
     end
-
-    # def look_around
-    #     puts "HELLO!"
-    # end
-
-
-
-  
 
 
 end
