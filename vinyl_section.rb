@@ -1,8 +1,8 @@
 require "json"
-require_relative "department"
+require_relative "store"
 require "tty-prompt"
 
-class VinylDepartment < Department
+class VinylSection < Store
   attr_reader :record
   
   def initialize

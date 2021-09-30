@@ -1,9 +1,8 @@
 require "json"
-require_relative "department"
+require_relative "store"
 require "tty-prompt"
-# require 'activesupport'
 
-class CounterDepartment < Department
+class CounterSection < Store
   
   def get_rejected
     excuses = ["Oh, sorry. My sister's friend's fish died, and yes, it was tragic.\n", "That sounds really fun! But sorry, I'm going to be busy not doing that.\n", "Oh what a shame, I actually have plans to teach my ferret to yodel. Some other time maybe (not)?\n","The voices in my head are telling me to say no. Sorry!\n"]

@@ -1,6 +1,6 @@
 require "terminal-table"
 
-class Department 
+class Store 
     #all Departments will have this data. 
     attr_reader :stock
     attr_accessor :cart, :cart_total

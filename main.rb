@@ -5,20 +5,14 @@ require "ruby-progressbar"
 require "artii"
 
 # require relative files:
-require_relative "department" # parent class
-require_relative "vinyl_department"
-require_relative "toys_department"
-require_relative "games_department"
-require_relative "listening_station_department"
-require_relative "counter_department"
+require_relative "store" # parent class
+require_relative "vinyl_section"
+require_relative "counter_section"
 
-# create instance of all Departments
-@@department = Department.new
-@@counter_department = CounterDepartment.new ## WARNINGS: will need to debug why the instance variables change to nil after being initialized once and called upon again
-@@vinyl_department = VinylDepartment.new
-# @toys_department = ToysDepartment.new
-# @games_department = GamesDepartment.new
-# @listening_station_department = ListeningStationDepartment.new
+# create instance of all Store Sections
+@@store = Store.new
+@@counter_section = CounterSection.new ## WARNINGS: will need to debug why the instance variables change to nil after being initialized once and called upon again
+@@vinyl_section = VinylSection.new
 
 # create tty-prompt and artii instances
 @prompt = TTY::Prompt.new
@@ -26,32 +20,20 @@ store_name = Artii::Base.new
 @store_name = store_name.asciify("AJ's Records!")
 system 'clear'
 
-def choose_department(choice) 
+def choose_store_section(choice) 
   system "clear"
   puts "\n・・・～～～～～ᕕ( ᐛ )ᕗ" # imitate the visitor walking
   progressbar = ProgressBar.create
   10.times { progressbar.increment; sleep 0.01 }
   case choice
   when 1
-    @@vinyl_department.display_menu
+    @@vinyl_section.display_menu
   when 2
-    @@department.display_cart
+    @@store.display_cart
   when 3
-    @@counter_department.go_to_counter
+    @@counter_section.go_to_counter
   when 4
     exit
-
-
-  # when 2
-  #   @@listening_station_department.display_menu
-  # when 3
-  #   @@games_department.display_menu
-  # when 4
-  #   @@toys_department.display_menu
-  # when 5
-  #   @@@counter_department.go_to_counter
-  # when 6
-  #   exit
   end
   
 end
@@ -67,7 +49,7 @@ def look_around
     menu.choice "Head over to the " + "COUNTER".red, 3
     menu.choice "Turn around and leave, I'm scared".magenta, 4
   end
-  choose_department(input)
+  choose_store_section(input)
 end
 
 puts @store_name
