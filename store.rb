@@ -44,7 +44,7 @@ class Store
     def add_items_to_cart
         add_more = true
             while add_more
-                add_more = @prompt.yes?("Should I add anything from here? If not, I can search again.....".green)
+                add_more = @prompt.yes?("Should I add anything?".green)
                     if !add_more
                         system 'clear'
                         break

@@ -3,6 +3,8 @@ require "colorize"
 require "tty-prompt"
 require "ruby-progressbar"
 require "artii"
+require "tty-box"
+require "rainbow"
 
 # require relative files:
 require_relative "store" # parent class
@@ -16,8 +18,8 @@ require_relative "counter_section"
 
 # create tty-prompt and artii instances
 @prompt = TTY::Prompt.new
-store_name = Artii::Base.new
-@store_name = store_name.asciify("AJ's Records!")
+@store_name = Artii::Base.new
+@store_name = TTY::Box.frame @store_name.asciify("AJ RECORDS *")
 system 'clear'
 
 def choose_store_section(choice) 
@@ -40,7 +42,7 @@ end
 
 def look_around
   puts @store_name
-  input = @prompt.select("Where do you want to go?") do |menu|
+  input = @prompt.select("Where should I go?") do |menu|
     menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
     menu.choice "Review whats in your " + "CART".blue, 2
     menu.choice "Head over to the " + "COUNTER".red, 3
@@ -50,12 +52,13 @@ def look_around
 end
 
 puts @store_name
-puts "You arrive at a swanky looking retro record store. " +
-       "The aisles are lined with hundreds of records, CDs, games, comic books.... " +
-       "the walls are covered in posters and memorabilia, there are a million pop vinyl and other toys staring directly at you. " +
-       "Oh my god is that Baby Yoda? You're so overstimulated your eyeballs almost explode. \n"
+puts "You arrive at a swanky looking retro record store.\n".blue +
+       "The aisles are lined with hundreds of records, CDs, games, comic books....\n".white +
+       "The walls are covered in posters and memorabilia.\n".white + 
+       "There are literally 2 MILLION pop vinyl figurines staring directly at you.\n".white +
+       "Oh my god is that Baby Yoda?".italic + " You're so overstimulated your eyeballs almost explode.\n".white
 
-answer = @prompt.yes?("\nDo you want to go in?")
+answer = @prompt.yes?("\nThe pop vinyl are super creepy. But what the heck, I do need more records.. should I go in?".green)
 if !answer
   system "clear"
   puts "You realise you have absolutely no understanding of how to talk to humans anymore since COVID. You turn around and leave.".red

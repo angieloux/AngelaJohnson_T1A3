@@ -7,7 +7,7 @@ class CounterSection < Store
   def get_rejected
     
     excuses = ["Oh, sorry. My sister's friend's fish died, and yes, it was tragic.", "That sounds really fun! But sorry, I'm going to be busy not doing that.", "Oh what a shame, I actually have plans to teach my ferret to yodel. Some other time maybe (not)?","The voices in my head are telling me to say no. Sorry!"]
-    puts puts "ಠ_ಠ\n" + "\n#{excuses.sample.light_magenta}"
+    puts puts "ಠ_ಠ\n" + "\n#{excuses.sample.magenta}"
     counter_interaction
   end
 
@@ -72,8 +72,7 @@ class CounterSection < Store
   end
 
   def go_to_counter 
-    puts "******************************"
-    puts ["[An all too bubbly 5ft 4 blonde girl greets you with a massive smile.]\n", "[The blonde at the counter's gaze is fixed on the group of rebellious looking youths poking around the store. After a moment she notices you are there]\n", "[The small blonde girl is humming along to the Beatles song that's playing over the speakers]\n"].sample
+    puts ["[An all too bubbly 5ft 4 blonde girl greets you with a massive smile.]\n".italic, "[The blonde at the counter's gaze is fixed on the group of rebellious looking youths poking around the store. After a moment she notices you are there]\n".italic, "[The small blonde girl is humming along to the Beatles song that's playing over the speakers]\n".italic].sample
     counter_interaction
   end
   

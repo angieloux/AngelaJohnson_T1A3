@@ -18,3 +18,5 @@ gem "json", "~> 2.5"
 gem "rspec", "~> 3.10"
 
 gem "terminal-table", "~> 3.0"
+
+gem "tty-box", "~> 0.7.0"
