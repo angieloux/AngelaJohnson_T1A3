@@ -43,9 +43,6 @@ def look_around
   input = @prompt.select("Where do you want to go?") do |menu|
     menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
     menu.choice "Review whats in your " + "CART".blue, 2
-    # menu.choice "Have a boogie over at the " + "LISTENING STATION".blue, 2
-    # menu.choice "Check out the " + "GAMES".light_green, 3
-    # menu.choice "Spend too much money on " + "memorabilia & TOYS!".yellow, 4
     menu.choice "Head over to the " + "COUNTER".red, 3
     menu.choice "Turn around and leave, I'm scared".magenta, 4
   end
@@ -58,7 +55,7 @@ puts "You arrive at a swanky looking retro record store. " +
        "the walls are covered in posters and memorabilia, there are a million pop vinyl and other toys staring directly at you. " +
        "Oh my god is that Baby Yoda? You're so overstimulated your eyeballs almost explode. \n"
 
-answer = @prompt.yes?("Do you want to go in?")
+answer = @prompt.yes?("\nDo you want to go in?")
 if !answer
   system "clear"
   puts "You realise you have absolutely no understanding of how to talk to humans anymore since COVID. You turn around and leave.".red

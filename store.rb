@@ -1,4 +1,5 @@
 require "terminal-table"
+# require_relative "vinyl_section"
 
 class Store 
     #all Departments will have this data. 
@@ -33,7 +34,7 @@ class Store
                 remove_items_from_cart
             else 
                 system 'clear'
-                display_menu
+                @@vinyl_section.display_menu
             end
     end
 
@@ -66,7 +67,9 @@ class Store
                 product_selection = gets.chomp
                 if item = @@cart.detect{|item| item["Catno"] == product_selection} 
                     @@cart.delete(item)
-                    puts "With a small tear falling down your cheek, you realise you are a broke student and you can't afford the nice things in life. You sadly put #{item["Artist"]}'s - #{item["Album"]} back on the shelf."
+                    system 'clear'
+                    puts "[You put #{item["Artist"]}'s - #{item["Album"]} back on the shelf.]\n".green
+                    display_cart
                 else 
                     system 'clear'
                     puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again:\n"

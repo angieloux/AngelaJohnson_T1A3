@@ -77,13 +77,8 @@ class VinylSection < Store
       end
       add_items_to_cart
 
-    # VIEW CART ***********
-    when 5
-      display_cart
-      display_menu
-
     # LOOK AROUND THE STORE **********
-    when 6
+    when 5
       look_around
     end
   end
@@ -94,8 +89,7 @@ class VinylSection < Store
       menu.choice "Look for a specific ARTIST", 2
       menu.choice "Look for a specific ALBUM", 3
       menu.choice "Look for a specific PRICE", 4
-      menu.choice "View your cart", 5
-      menu.choice "Go back", 6
+      menu.choice "Go back", 5
     end
     filter_records(input)
 
