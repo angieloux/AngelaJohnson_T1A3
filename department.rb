@@ -1,5 +1,4 @@
-# require_relative 'vinyl_department'
-require "tty-table"
+require "terminal-table"
 
 class Department 
     #all Departments will have this data. 
@@ -9,7 +8,7 @@ class Department
     def initialize 
         @stock = stock
         @headings = []
-        @cart = cart 
+        @cart = [] 
         @prompt = TTY::Prompt.new
         @total = total 
     end
@@ -20,16 +19,19 @@ class Department
     end
 
     def display_cart
-        rows = []
-        @total = @products.sum{|item| item["Price"]}
-        headings = ["Catno", "Album", "Artist", "Year", "Price", "Console"]
+        puts "You look in your cart..." 
+        display_records_in_cart
         # puts @cart
-        @stock.each do |i|
-            rows << ["#{i["Catno"]}", "#{i["Album"]}", "#{i["Artist"]}", "#{i["Year"]}", "$#{i["Price"]}"]
-        end
+        # rows = []
+        # @total = @products.sum{|item| item["Price"]}
+        # headings = ["Catno", "Album", "Artist", "Year", "Price", "Console"]
+        # # puts @cart
+        # @stock.each do |i|
+        #     rows << ["#{i["Catno"]}", "#{i["Album"]}", "#{i["Artist"]}", "#{i["Year"]}", "$#{i["Price"]}"]
+        # end
         
-        table = Terminal::Table.new :title => "Example", :headings => headings, :rows => rows, :style => {:all_separators => true}
-        puts "#{table} \n"
+        # table = Terminal::Table.new :title => "Example", :headings => headings, :rows => rows, :style => {:all_separators => true}
+        # puts "#{table} \n"
         if @prompt.yes?("Want to remove anything?")
             remove_items_from_cart
         else 
@@ -67,7 +69,7 @@ class Department
     
     def remove_items_from_cart
         finished = false
-        puts "Type a catalogue number to remove the item from your cart."
+        puts "Type the " + "catalogue number ".magenta + "to remove the item from your cart."
         while !finished
                 product_selection = gets.chomp
                 if item = @cart.detect{|item| item["Catno"] == product_selection} 
@@ -86,6 +88,14 @@ class Department
 
     def pay_for_item
     end
+
+    # def look_around
+    #     puts "HELLO!"
+    # end
+
+
+
+  
 
 
 end

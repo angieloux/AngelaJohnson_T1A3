@@ -13,9 +13,9 @@ require_relative "listening_station_department"
 require_relative "counter_department"
 
 # create instance of all Departments
-@counter_department = CounterDepartment.new
-department = Department.new
-@vinyl_department = VinylDepartment.new
+@@department = Department.new
+@@counter_department = CounterDepartment.new ## WARNINGS: will need to debug why the instance variables change to nil after being initialized once and called upon again
+@@vinyl_department = VinylDepartment.new
 @toys_department = ToysDepartment.new
 @games_department = GamesDepartment.new
 @listening_station_department = ListeningStationDepartment.new
@@ -24,25 +24,26 @@ department = Department.new
 @prompt = TTY::Prompt.new
 store_name = Artii::Base.new
 
-def choose_department(choice)
+def choose_department(choice) 
   system "clear"
   puts "\n・・・～～～～～ᕕ( ᐛ )ᕗ" # imitate the visitor walking
   progressbar = ProgressBar.create
   10.times { progressbar.increment; sleep 0.20 }
   case choice
   when 1
-    @vinyl_department.display_menu
+    @@vinyl_department.display_menu
   when 2
-    @listening_station_department.display_menu
+    @@listening_station_department.display_menu
   when 3
-    @games_department.display_menu
+    @@games_department.display_menu
   when 4
-    @toys_department.display_menu
+    @@toys_department.display_menu
   when 5
-    @counter_department.go_to_counter
+    @@counter_department.go_to_counter
   when 6
     exit
   end
+  
 end
 
 def look_around

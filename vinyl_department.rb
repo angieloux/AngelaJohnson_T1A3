@@ -1,17 +1,21 @@
 require "json"
 require_relative "department"
 require "tty-prompt"
-# require 'activesupport'
 
 class VinylDepartment < Department
   attr_reader :record
   def initialize
+    super 
     file = File.read("vinyl.json")
     @stock = JSON.parse(file)
-    @prompt = TTY::Prompt.new
     @record = record
-    @cart =[]
+    @cart = []
+  end
 
+  def display_records_in_cart
+    for vinyl in @cart 
+        puts "#{vinyl["Catno"]}: ".magenta + "#{vinyl["Artist"]} - #{vinyl["Album"]} (#{vinyl["Year"]}) " + "$#{vinyl["Price"]}".yellow
+    end
   end
 
   def display_records
