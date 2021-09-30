@@ -13,20 +13,28 @@ class Department
         @@cart_total = cart_total
     end
 
-    def display_menu
-        # visitors will have to filter their search specifically in each department (i.e. VinylDepartment will be by Genre/Artist, GamesDepartment will be by Console/Title etc)
-        raise "The department should have this method"
-    end
+    # def display_menu
+    #     # visitors will have to filter their search specifically in each department (i.e. VinylDepartment will be by Genre/Artist, GamesDepartment will be by Console/Title etc)
+    #     raise "The department should have this method"
+    # end
 
     def display_cart
-        puts "You look in your cart..." 
-        display_records_in_cart
-        if @prompt.yes?("Want to remove anything?")
-            remove_items_from_cart
+        if @@cart.empty? 
+            puts "You dope. You don't have anything yet.... ".red
+            look_around
         else 
-            system 'clear'
-            display_menu
-        end
+            for vinyl in @@cart 
+              puts "#{vinyl["Catno"]}: ".magenta + "#{vinyl["Artist"]} - #{vinyl["Album"]} (#{vinyl["Year"]}) " + "$#{vinyl["Price"]}".yellow
+            end
+          end
+        # display_records_in_cart
+        remove = @prompt.yes?("Want to remove anything?")
+            if remove 
+                remove_items_from_cart
+            else 
+                system 'clear'
+                display_menu
+            end
     end
 
     def add_items_to_cart
@@ -61,7 +69,8 @@ class Department
                     puts "With a small tear falling down your cheek, you realise you are a broke student and you can't afford the nice things in life. You sadly put #{item["Artist"]}'s - #{item["Album"]} back on the shelf."
                 else 
                     system 'clear'
-                    puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again:\n\n"
+                    puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again:\n"
+                    puts
                     display_cart
                 end
                 finished = @prompt.yes?('Done?')

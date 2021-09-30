@@ -16,9 +16,9 @@ require_relative "counter_department"
 @@department = Department.new
 @@counter_department = CounterDepartment.new ## WARNINGS: will need to debug why the instance variables change to nil after being initialized once and called upon again
 @@vinyl_department = VinylDepartment.new
-@toys_department = ToysDepartment.new
-@games_department = GamesDepartment.new
-@listening_station_department = ListeningStationDepartment.new
+# @toys_department = ToysDepartment.new
+# @games_department = GamesDepartment.new
+# @listening_station_department = ListeningStationDepartment.new
 
 # create tty-prompt and artii instances
 @prompt = TTY::Prompt.new
@@ -35,29 +35,37 @@ def choose_department(choice)
   when 1
     @@vinyl_department.display_menu
   when 2
-    @@listening_station_department.display_menu
+    @@department.display_cart
   when 3
-    @@games_department.display_menu
-  when 4
-    @@toys_department.display_menu
-  when 5
     @@counter_department.go_to_counter
-  when 6
+  when 4
     exit
+
+
+  # when 2
+  #   @@listening_station_department.display_menu
+  # when 3
+  #   @@games_department.display_menu
+  # when 4
+  #   @@toys_department.display_menu
+  # when 5
+  #   @@@counter_department.go_to_counter
+  # when 6
+  #   exit
   end
   
 end
 
 def look_around
-  system 'clear'
   puts @store_name
   input = @prompt.select("Where do you want to go?") do |menu|
     menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
-    menu.choice "Have a boogie over at the " + "LISTENING STATION".blue, 2
-    menu.choice "Check out the " + "GAMES".light_green, 3
-    menu.choice "Spend too much money on " + "memorabilia & TOYS!".yellow, 4
-    menu.choice "Head over to the " + "COUNTER".red, 5
-    menu.choice "Turn around and leave, I'm scared".magenta, 6
+    menu.choice "Review whats in your " + "CART".blue, 2
+    # menu.choice "Have a boogie over at the " + "LISTENING STATION".blue, 2
+    # menu.choice "Check out the " + "GAMES".light_green, 3
+    # menu.choice "Spend too much money on " + "memorabilia & TOYS!".yellow, 4
+    menu.choice "Head over to the " + "COUNTER".red, 3
+    menu.choice "Turn around and leave, I'm scared".magenta, 4
   end
   choose_department(input)
 end
@@ -74,5 +82,6 @@ if !answer
   puts "You realise you have absolutely no understanding of how to talk to humans anymore since COVID. You turn around and leave.".red
   exit
 else
+  system 'clear'
   look_around
 end

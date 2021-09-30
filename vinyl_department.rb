@@ -12,12 +12,6 @@ class VinylDepartment < Department
     @record = record
   end
 
-  def display_records_in_cart
-    for vinyl in @@cart 
-        puts "#{vinyl["Catno"]}: ".magenta + "#{vinyl["Artist"]} - #{vinyl["Album"]} (#{vinyl["Year"]}) " + "$#{vinyl["Price"]}".yellow
-    end
-  end
-
   def display_filtered_records
     puts "CATALOGUE #: #{@record["Catno"]}\n" +
     "ALBUM: #{@record["Album"]}\n" +
