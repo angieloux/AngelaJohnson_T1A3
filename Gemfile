@@ -20,3 +20,5 @@ gem "rspec", "~> 3.10"
 gem "terminal-table", "~> 3.0"
 
 gem "tty-box", "~> 0.7.0"
+
+gem "require_all", "~> 3.0"

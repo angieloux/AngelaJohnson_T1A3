@@ -1,23 +1,14 @@
 require "terminal-table"
-# require_relative "vinyl_section"
+require 'json'
 
-class Store 
-    #all Departments will have this data. 
-    attr_reader :stock
-    attr_accessor :cart, :cart_total
-
-    def initialize 
-        @stock = stock
+module Cart
+    
         @headings = []
-        @prompt = TTY::Prompt.new
+        @@prompt = TTY::Prompt.new
         @@cart = [] 
-        @@cart_total = cart_total
-    end
-
-    # def display_menu
-    #     # visitors will have to filter their search specifically in each department (i.e. VinylDepartment will be by Genre/Artist, GamesDepartment will be by Console/Title etc)
-    #     raise "The department should have this method"
-    # end
+        @@cart_total = 0
+        file = File.read("vinyl.json")
+        @@stock = JSON.parse(file)
 
     def display_cart
         if @@cart.empty? 
@@ -32,7 +23,7 @@ class Store
             puts "***************************************\n"
           end
         # display_records_in_cart
-        remove = @prompt.yes?("Records...nom nom nom. Do I need to change anything?".green)
+        remove = @@prompt.yes?("Records...nom nom nom. Do I need to change anything?".green)
             if remove 
                 remove_items_from_cart
             else 
@@ -44,14 +35,14 @@ class Store
     def add_items_to_cart
         add_more = true
             while add_more
-                add_more = @prompt.yes?("Should I add anything?".green)
+                add_more = @@prompt.yes?("Should I add anything?".green)
                     if !add_more
                         system 'clear'
                         break
                     end
                 puts "Typing the record's " + "CATALOGUE # ".light_magenta + "should do it."
                 product_selection = gets.chomp
-                for item in @stock
+                for item in @@stock
                     if item["Catno"] == product_selection
                     @@cart << item
                     puts "[You stash #{item["Artist"]}'s - #{item["Album"]} in your cart.]\n".blue
@@ -61,7 +52,7 @@ class Store
                     puts "Errr that catalogue number must have been wrong, let's try that again."
                 end
             end
-            display_menu
+            StoreNavigation::display_menu
     end
     
     def remove_items_from_cart
@@ -79,7 +70,7 @@ class Store
                     puts
                     display_cart
                 end
-                finished = @prompt.yes?('Should I remove anything else?')
+                finished = @@prompt.yes?('Should I remove anything else?')
         end
         system 'clear'
         display_menu

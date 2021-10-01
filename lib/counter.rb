@@ -1,8 +1,10 @@
 require "json"
-require_relative "store"
+# require_relative "store"
+# require_relative "vinyl_section"
+# require_relative "store_navigation"
 require "tty-prompt"
 
-class CounterSection < Store
+module Counter
   
   def get_rejected
     
