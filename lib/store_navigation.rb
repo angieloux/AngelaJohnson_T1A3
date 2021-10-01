@@ -9,10 +9,10 @@ require 'require_all'
 
 require_all './'
 include VinylSection
+include Cart
 
 module StoreNavigation
   @@prompt = TTY::Prompt.new
-  # @@cart = Cart.new
   @@store_name = Artii::Base.new    
   @@store_name = TTY::Box.frame @@store_name.asciify("AJ RECORDS *")
   
@@ -25,16 +25,16 @@ module StoreNavigation
     when 1
       display_menu
     when 2
-      store.display_cart
+      display_cart
     when 3
-      counter_section.go_to_counter
+      go_to_counter
     when 4
       exit
     end
   end
 
   def self.look_around
-    puts @@store_name
+    # puts @@store_name
     input = @@prompt.select("Where should I go?") do |menu|
       menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
       menu.choice "Review whats in your " + "CART".blue, 2
@@ -51,7 +51,7 @@ module StoreNavigation
       "There are literally 2 MILLION pop vinyl figurines staring directly at you.\n".white +
       "Oh my god is that Baby Yoda?".italic + " You're so overstimulated your eyeballs almost explode.\n".white
     
-      answer = @@prompt.yes?("\nThe pop vinyl are super creepy. But what the heck, I do need more records.. should I go in?".green)
+      answer = @@prompt.yes?("The pop vinyl are super creepy. But what the heck, I do need more records.. should I go in?".green)
       if !answer
         system "clear"
         puts "You realise you have absolutely no understanding of how to talk to humans anymore since COVID. You turn around and leave.".red
