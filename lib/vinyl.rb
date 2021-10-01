@@ -16,8 +16,6 @@ module VinylSection
   end
 
   def filter_records(filter_choice)
-    # @record = record
-
     system("clear")
     case filter_choice
     # BY GENRE **********

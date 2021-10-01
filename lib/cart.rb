@@ -74,7 +74,7 @@ module Cart
         display_menu
     end
     def total_cost_of_cart
-        @@cart_total = @@cart.sum{|item| item["Price"]}
+        @@cart_total = @@cart.sum{|item| item["Price"]}.round(2)
     end
 
 

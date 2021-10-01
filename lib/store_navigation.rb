@@ -10,6 +10,7 @@ require 'require_all'
 require_all './'
 include VinylSection
 include Cart
+include Counter
 
 module StoreNavigation
   @@prompt = TTY::Prompt.new
