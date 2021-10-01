@@ -39,8 +39,12 @@ module Counter
       counter_decision = @@prompt.select("How can I help?\n".yellow) do |menu|
       menu.choice "I'd like to pay for these", 1
       menu.choice "Errr actually, on second thought. I might have a second look around.", 2
-      menu.choice "I changed my mind and I'm just gonna head out.", 3
-      menu.choice "Actually... I wanted to see if you were busy later....want to grab a drink?", 4
+      if @@cart.empty? == true 
+        menu.choice "I changed my mind and I'm just gonna head out.", 3
+      else 
+        menu.choice "I changed my mind, and I'm going to head out. Can I just leave all these records with you?", 4
+      end 
+      menu.choice "Actually... I wanted to see if you were busy later....want to grab a drink?", 5
     end
     system "clear"
 
@@ -65,15 +69,15 @@ module Counter
       puts "No worries! Come over here when you're ready.".yellow
       look_around
     when 3
-      if @@cart.empty?
         system 'clear'
         puts "d(^o^)b¸¸♬\n"
         puts "All right, see ya!".yellow
-      else 
-        puts "I guess I'll just put all your records back then. Yay for me. So wonderful. I love my job. I love sorting. EVERYTHING. IS. GREAT.\n (╯°□°）╯︵ ┻━┻".yellow
-        end
         exit
     when 4
+        puts "Of coooooourse. Nothing I would enjoy more. So wonderful. I love my job. I love sorting. EVERYTHING. IS. GREAT.\n (╯°□°）╯︵ ┻━┻\n".yellow
+        puts "[...You back away slowly and exit the store]\n".italic
+        exit
+    when 5
       get_rejected
     
   end
