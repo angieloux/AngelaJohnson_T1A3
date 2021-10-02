@@ -47,7 +47,7 @@ module StoreNavigation
   def self.look_around
     input = PROMPT.select("Where should I go?") do |menu|
       menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
-      menu.choice "Review whats in your " + "CART".light_blue, 2
+      menu.choice "Review what's in your " + "CART".light_blue, 2
       menu.choice "Head over to the " + "COUNTER".yellow, 3
       if Cart.total_cost_of_cart == 0
         menu.choice "Turn around and leave. (EXIT)".magenta, 4
