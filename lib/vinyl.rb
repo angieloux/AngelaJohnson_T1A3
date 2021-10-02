@@ -17,7 +17,7 @@ module VinylSection
 
   def search_by_keyword(tag, tag_2 = nil)
     found = false
-    until found
+    while !found
       puts "What #{tag.downcase} are you looking for?"
       keyword = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
       system 'clear'
@@ -28,14 +28,12 @@ module VinylSection
       for record in STOCK
         if (tag_2 == nil && (record[tag] == keyword || record[tag].include?(keyword))) || (tag_2 != nil && record[tag_2].include?(keyword))
           display_filtered_records(record) 
-        else
-          break
+          found = true 
         end
-        found = true
       end
       if !found
-        puts "[No results found... maybe I should try and simplify my search?)]".italic.magenta + "HINT: 'beach' will return The Beach Boys, 'rock' will return Psychedleic Rock, Hard Rock, Rockabilly etc, 'bob' will return Bob Dylan, Bob Marley etc"
-        display_menu
+      puts "[No results found... maybe I should try and simplify my search?)]\n".italic.magenta + "HINT: 'beach' will return The Beach Boys\n'rock' will return Psychedelic Rock, Hard Rock, Rockabilly etc,\n'bob' will return Bob Dylan, Bob Marley etc."
+      display_menu
       else 
         @@cart.add_items_to_cart
       end
