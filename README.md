@@ -1,11 +1,11 @@
 # AJ RECORDS: Terminal App 
 Created by Angela Johnson, October 2021 | [Link to Github](https://github.com/angieloux/AngelaJohnson_T1A3)
-## Install
+## 1. Install
 Steps to install app
 Dependencies required
 System/hardware requirements
 
-## Statement of Purpose & Scope
+## 2. Statement of Purpose & Scope
 *Overview*: 
 Endless lockdowns getting in the way of all your record-buying dreams? Well look no further! AJ Records is a 
 simple CLI app designed to simulate an in-store record-buying experience.  Users can visit the store and look through hundreds of records, narrow their search by searching for whatever genre/album/price/artist they want, add them to their cart and go and check out. Don't want to buy anything? Try your luck with the blonde at the counter (disclaimer: you will be disappointed).
@@ -19,7 +19,7 @@ With the recent resurgence of vinyl among the younger generation, this app is ai
 *Usage*
 AJ Records is very simple to navigate. The user can enter the store, have a look around, go up to the counter and have a chat to the girl there, or go and look at the vinyl. Once they are in the vinyl section, they are able to choose between searching by Genre, Artist, Album or Price. The first three involve typing any number of keywords, and the program will return all of the records that contain those keywords according to the respective search category. Or, if the user is keeping to a budget, they can search by price, which will allow them to type a maximum price they are willing to pay, and the program will only display records less than or equal to that value. They can review their cart, make changes, or go up to the counter and interact with the girl. Once at the counter, they can choose to pay, exit, look around again, or ask her out on a date. Future updates to the game will include a Memorabilia section, Games section and a Listening Station (where users can listen to music!).
 
-## Features
+## 3. Features
 
 ### F1: Store Navigation
 
@@ -86,15 +86,40 @@ If they choose to remove something, they can type the respective catalogue numbe
 #### Ask on a date
 - If the user decides to take the leap and ask the girl out (option 5), any 1 of 4 separate rejection messages will print out, and the user can then choose another counter menu option. 
 
-## User interaction
+## 4. User Interaction & Experience
 
- 1. How the user finds out how to interact with each feature
- 2. How the user interacts with features
- 3. How errors are handled by app and displayed to user
+
+#### **How the user finds out how to interact with each feature**
+- The user interaction in AJ Records is purposefully straightforward, in order to mimic a real in-store experience. The user will find out how to interact with each of the four features after being directly prompted by the program at various points by displaying multiple choice menus (as described through section 3. Features). 
+
+#### *Accessing Feature 1: Store Navigation:*
+![Entering AJ Records, Displaying Feature 1: Store Navigation](./docs/AccessingStoreNavigation.gif "Entering AJ Records, Displaying Feature 1: Store Navigation")
+
+#### *Accessing Feature 2: Product Search Filter:*
+![Displaying Feature 2: Product Search Filter](./docs/AccessingProductFilterSearch.gif "Displaying Feature 2: Product Search Filter")
+
+#### *Accessing Feature 3: Cart:*
+![Displaying Feature 3: Cart](./docs/AccessingCart.gif "Displaying Feature 3: Cart")
+
+#### *Accessing Feature 4: Checkout:*
+![Displaying Feature 4: Checkout](./docs/AccessingCheckout.gif "Displaying Feature 4: Checkout")
+
+#### 2. How the user interacts with features
+
+Feature 1 Interactions:
+
+
+
+
+#### 3. How errors are handled by app and displayed to user
 
 ## Control Flow Diagram
+![Control flow diagram](./docs/ControlFlowDiagram.png "Control Flow Diagram")
 
+Full size diagram located here:
+> `./docs/ControlFlowDiagram.png`
 
 ## Testing
-Manual testing was performed throughout the development process, and details of a portion of these tests can be found here. 
+Manual testing was performed throughout the development process. The testing spreadsheet can be found here:
+>`./docs/ManualTests.pdf`
 
