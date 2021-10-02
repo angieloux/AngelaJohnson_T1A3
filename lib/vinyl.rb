@@ -21,15 +21,20 @@ module VinylSection
       puts "What #{tag.downcase} are you looking for?"
       keyword = gets.split.map(&:capitalize).join(' ').chomp # match the data to the format of the json
       system 'clear'
+      if keyword == "" 
+        puts "[No results. Woops, guess I should actually search for something..]".italic.red
+        next
+      end
       for record in STOCK
         if (tag_2 == nil && (record[tag] == keyword || record[tag].include?(keyword))) || (tag_2 != nil && record[tag_2].include?(keyword))
           display_filtered_records(record) 
-          found = true
+        else
           break
         end
+        found = true
       end
-      if !found 
-        puts "[No results found... maybe I should try fewer words]".italic.magenta
+      if !found
+        puts "[No results found... maybe I should try and simplify my search?)]".italic.magenta + "HINT: 'beach' will return The Beach Boys, 'rock' will return Psychedleic Rock, Hard Rock, Rockabilly etc, 'bob' will return Bob Dylan, Bob Marley etc"
         display_menu
       else 
         @@cart.add_items_to_cart
@@ -43,16 +48,10 @@ module VinylSection
     # BY GENRE **********
     when 1
     search_by_keyword("Genre", "Subgenre")
-    
-    # BY ARTIST **********
     when 2
     search_by_keyword("Artist")
-
-    # BY ALBUM **********
     when 3
     search_by_keyword("Album")
-
-    # BY PRICE **********
     when 4
       puts "Whats the max you're willing to pay for a record?"
       price = gets.to_i
