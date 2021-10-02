@@ -1,6 +1,3 @@
-require "terminal-table"
-require 'json'
-
 module Cart
     
         @headings = []
@@ -9,7 +6,7 @@ module Cart
 
     def display_cart
         if @@cart.empty? 
-            puts "What a sad little empty cart. :(".red
+            puts "What a sad little empty cart. :(".light_red
             look_around
         else 
             puts "***************************************\n"
@@ -32,7 +29,7 @@ module Cart
         done = false
         while !done    
             product_selection = gets.chomp
-            unless (1...498).include?(product_selection.to_i)
+            unless (1..498).include?(product_selection.to_i)
                 puts "[Invalid cat number, let's try that again.]".italic
                 puts "HINT: Catalogue numbers are between 1 & 498\n".yellow
                 next
@@ -40,7 +37,7 @@ module Cart
             for item in STOCK
                 if item["Catno"] == product_selection
                 @@cart << item
-                puts "[You stash #{item["Artist"]}'s - #{item["Album"]} in your cart.]\n".blue.italic
+                puts "[You stash #{item["Artist"]}'s - #{item["Album"]} in your cart.]\n".light_blue.italic
                 end
             end
                 if PROMPT.yes?("Anything else?".green) == false 
@@ -59,10 +56,10 @@ module Cart
                 if item = @@cart.detect{|item| item["Catno"] == product_selection} 
                     @@cart.delete(item)
                     system 'clear'
-                    puts "[You put #{item["Artist"]}'s - #{item["Album"]} back on the shelf.]".blue.italic
+                    puts "[You put #{item["Artist"]}'s - #{item["Album"]} back on the shelf.]".light_blue.italic
                 else 
                     system 'clear'
-                    puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again. They're probably the ones written in " + "purple..".magenta
+                    puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again. They're probably the ones written in " + "magenta..".magenta
                     puts
                 end
                 display_cart

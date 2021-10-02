@@ -4,17 +4,16 @@ require "tty-prompt"
 require "ruby-progressbar"
 require "artii"
 require "tty-box"
-require "rainbow"
 require 'require_all'
 require 'json'
+require "terminal-table"
 
-require_all './'
+require_all 'lib'
 
-FILE = File.read("vinyl.json")
+FILE = File.read("./data/vinyl.json")
 STOCK = JSON.parse(FILE)
 PROMPT = TTY::Prompt.new
 
-# include StoreNavigation
 include VinylSection
 include Cart
 include Counter
@@ -48,8 +47,8 @@ module StoreNavigation
   def self.look_around
     input = PROMPT.select("Where should I go?") do |menu|
       menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
-      menu.choice "Review whats in your " + "CART".blue, 2
-      menu.choice "Head over to the " + "COUNTER".red, 3
+      menu.choice "Review whats in your " + "CART".light_blue, 2
+      menu.choice "Head over to the " + "COUNTER".yellow, 3
       if Cart.total_cost_of_cart == 0
         menu.choice "Turn around and leave. (EXIT)".magenta, 4
       else 

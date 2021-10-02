@@ -1,6 +1,3 @@
-require "json"
-require "tty-prompt"
-
 module VinylSection
   include Cart
 
@@ -57,7 +54,7 @@ module VinylSection
     price = gets.to_i
     system 'clear'
     if (..40).include?(price)
-      puts "[What was I thinking, I haven't seen a single record here for less than ".italic + "40 bucks. ".magenta.italic + "Guess I've gotta stretch the purse strings... :'( ]".italic
+      puts "[What was I thinking, I haven't seen a single record here for less than ".italic + "40 bucks.\n".magenta.italic + "Guess I've gotta stretch the purse strings... :'( ]".italic
     end
     for record in STOCK
       if record["Price"] <= price
@@ -88,7 +85,7 @@ end
   end
 
   def display_menu
-    input = PROMPT.select("There are literally hundreds of records staring at you in the face. You ponder what to do:".red) do |menu|
+    input = PROMPT.select("There are literally hundreds of records staring at you in the face. You ponder what to do:".light_cyan) do |menu|
       menu.choice "Look for a specific GENRE", 1
       menu.choice "Look for a specific ARTIST", 2
       menu.choice "Look for a specific ALBUM", 3

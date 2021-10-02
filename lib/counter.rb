@@ -8,7 +8,7 @@ module Counter
   def get_rejected
     
     excuses = ["Oh, sorry. My sister's friend's fish died, and yes, it was tragic.", "That sounds really fun! But sorry, I'm going to be busy not doing that.", "Oh what a shame, I actually have plans to teach my ferret to yodel. Some other time maybe (not)?","The voices in my head are telling me to say no. Sorry!"]
-    puts puts "ಠ_ಠ #{excuses.sample}".red
+    puts puts "ಠ_ಠ #{excuses.sample}".light_blue
     counter_interaction
   end
 
@@ -57,7 +57,7 @@ module Counter
       else 
         puts "Awesome! I'll just tally that up for you...".yellow
         order_summary(@@cart_total)
-        puts "[You grimace at the total, and hand over your well-worn credit card]\n".italic.blue
+        puts "[You grimace at the total, and hand over your well-worn credit card]\n".italic.light_blue
         progressbar = ProgressBar.create
         10.times { progressbar.increment; sleep 0.1 }
         puts "\nd(^o^)b¸¸♬ Thanks for shopping at AJ's Records! Come back anytime.".yellow
