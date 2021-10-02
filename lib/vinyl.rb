@@ -4,6 +4,15 @@ require "tty-prompt"
 module VinylSection
   include Cart
 
+  def decide_whether_to_add_to_cart
+    if PROMPT.yes?("Should I add anything?".green)
+      add_items_to_cart
+    else
+      system 'clear'
+      display_menu
+    end
+  end
+
   def display_filtered_records(record)
     puts "CATALOGUE #: #{record["Catno"]}\n"+
     "ALBUM: #{record["Album"]}\n" +
@@ -27,18 +36,38 @@ module VinylSection
       end
       for record in STOCK
         if (tag_2 == nil && (record[tag] == keyword || record[tag].include?(keyword))) || (tag_2 != nil && record[tag_2].include?(keyword))
-          display_filtered_records(record) 
+        display_filtered_records(record) 
           found = true 
         end
+        
       end
       if !found
       puts "[No results found... maybe I should try and simplify my search?)]\n".italic.magenta + "HINT: 'beach' will return The Beach Boys\n'rock' will return Psychedelic Rock, Hard Rock, Rockabilly etc,\n'bob' will return Bob Dylan, Bob Marley etc."
       display_menu
       else 
-        @@cart.add_items_to_cart
+        decide_whether_to_add_to_cart
       end
     end
   end
+
+  def search_by_price(max)
+    found = false
+  while !found
+    puts "Whats the max you're willing to pay for a record?"
+    price = gets.to_i
+    system 'clear'
+    if (..40).include?(price)
+      puts "[What was I thinking, I haven't seen a single record here for less than ".italic + "40 bucks. ".magenta.italic + "Guess I've gotta stretch the purse strings... :'( ]".italic
+    end
+    for record in STOCK
+      if record["Price"] <= price
+          display_filtered_records(record)
+          found = true
+      end
+    end
+  end
+  decide_whether_to_add_to_cart
+end
 
   def filter_records(filter_choice)
     system("clear")
@@ -51,23 +80,7 @@ module VinylSection
     when 3
     search_by_keyword("Album")
     when 4 
-        found = false
-        while !found
-          puts "Whats the max you're willing to pay for a record?"
-          price = gets.to_i
-          system 'clear'
-          if (..40).include?(price)
-            puts "[What was I thinking, I haven't seen a single record here for less than ".italic + "40 bucks. ".magenta.italic + "Guess I've gotta stretch the purse strings... :'( ]".italic
-          end
-          for record in STOCK
-            if record["Price"] <= price
-                display_filtered_records(record)
-                found = true
-            end
-          end
-        end
-        @@cart.add_items_to_cart
-
+    search_by_price("Price")
     # LOOK AROUND THE STORE **********
     when 5
       look_around

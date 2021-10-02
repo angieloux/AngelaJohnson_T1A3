@@ -28,26 +28,27 @@ module Cart
     end
 
     def add_items_to_cart
-        add_more = true
-            while add_more
-                add_more = PROMPT.yes?("Should I add anything?".green)
-                    if !add_more
-                        system 'clear'
-                        break
-                    end
-                puts "Typing the record's " + "CATALOGUE # ".light_magenta + "should do it."
-                product_selection = gets.chomp
-                for item in STOCK
-                    if item["Catno"] == product_selection
-                    @@cart << item
-                    puts "[You stash #{item["Artist"]}'s - #{item["Album"]} in your cart.]\n".blue.italic
-                    end
+        puts "Typing the record's " + "CATALOGUE # ".light_magenta + "should do it."
+        done = false
+        while !done    
+            product_selection = gets.chomp
+            unless (1...498).include?(product_selection.to_i)
+                puts "[Invalid cat number, let's try that again.]".italic
+                puts "HINT: Catalogue numbers are between 1 & 498\n".yellow
+                next
             end
-                if product_selection.to_i > 498
-                    puts "Errr that catalogue number must have been wrong, let's try that again."
+            for item in STOCK
+                if item["Catno"] == product_selection
+                @@cart << item
+                puts "[You stash #{item["Artist"]}'s - #{item["Album"]} in your cart.]\n".blue.italic
                 end
             end
-            StoreNavigation::display_menu
+                if PROMPT.yes?("Anything else?".green) == false 
+                    done = true 
+                    system 'clear'
+                end
+        end
+        display_menu
     end
     
     def remove_items_from_cart
