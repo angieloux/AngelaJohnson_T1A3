@@ -4,7 +4,7 @@ require "tty-prompt"
 
 module Counter
   include Cart 
-
+  
   def get_rejected
     
     excuses = ["Oh, sorry. My sister's friend's fish died, and yes, it was tragic.", "That sounds really fun! But sorry, I'm going to be busy not doing that.", "Oh what a shame, I actually have plans to teach my ferret to yodel. Some other time maybe (not)?","The voices in my head are telling me to say no. Sorry!"]
@@ -23,7 +23,7 @@ module Counter
       tax_invoice = Terminal::Table.new :title => "AJ's Records: Purchase Summary", :headings => headings, :rows => rows, :style => {:all_separators => true}
     puts "#{tax_invoice} \n"
     
-    pay = @@prompt.yes?("Your total comes to $#{@@cart_total}, please! Did you want to go ahead and pay?".yellow)
+    pay = PROMPT.yes?("Your total comes to $#{@@cart_total}, please! Did you want to go ahead and pay?".yellow)
       if !pay 
         system 'clear' 
         puts "No worries, come back once you're ready! (Please don't leave the store without paying...)".yellow
@@ -36,7 +36,7 @@ module Counter
 
 
   def counter_interaction
-      counter_decision = @@prompt.select("How can I help?\n".yellow) do |menu|
+      counter_decision = PROMPT.select("How can I help?\n".yellow) do |menu|
       menu.choice "I'd like to pay for these", 1
       menu.choice "Errr actually, on second thought. I might have a second look around.", 2
       if @@cart.empty? == true 

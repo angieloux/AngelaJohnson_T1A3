@@ -6,14 +6,20 @@ require "artii"
 require "tty-box"
 require "rainbow"
 require 'require_all'
+require 'json'
 
 require_all './'
+
+FILE = File.read("vinyl.json")
+STOCK = JSON.parse(FILE)
+PROMPT = TTY::Prompt.new
+
+# include StoreNavigation
 include VinylSection
 include Cart
 include Counter
 
 module StoreNavigation
-  @@prompt = TTY::Prompt.new
   @@store_name = Artii::Base.new    
   @@store_name = TTY::Box.frame @@store_name.asciify("AJ RECORDS *")
   
@@ -40,11 +46,11 @@ module StoreNavigation
   end
 
   def self.look_around
-    input = @@prompt.select("Where should I go?") do |menu|
+    input = PROMPT.select("Where should I go?") do |menu|
       menu.choice "Cruise over to the " + "VINYL".light_magenta, 1
       menu.choice "Review whats in your " + "CART".blue, 2
       menu.choice "Head over to the " + "COUNTER".red, 3
-      if total_cost_of_cart == 0
+      if Cart.total_cost_of_cart == 0
         menu.choice "Turn around and leave. (EXIT)".magenta, 4
       else 
         menu.choice "Drop your records to the girl at the counter and leave (EXIT)".magenta, 5
@@ -60,7 +66,7 @@ module StoreNavigation
       "There are literally 2 MILLION pop vinyl figurines staring directly at you.\n".white +
       "Oh my god is that Baby Yoda?".italic.green + " You're so overstimulated your eyeballs almost explode.\n".white
     
-      answer = @@prompt.yes?("The pop vinyl are super creepy. But I do need more records.. should I go in?".magenta)
+      answer = PROMPT.yes?("The pop vinyl are super creepy. But I do need more records.. should I go in?".magenta)
       if !answer
         system "clear"
         puts "You realise you have absolutely no understanding of how to talk to humans anymore since COVID. You turn around and leave.".red
@@ -69,4 +75,4 @@ module StoreNavigation
         system 'clear'
         look_around
       end
-      end
+end

@@ -4,11 +4,8 @@ require 'json'
 module Cart
     
         @headings = []
-        @@prompt = TTY::Prompt.new
         @@cart = [] 
         @@cart_total = 0
-        file = File.read("vinyl.json")
-        @@stock = JSON.parse(file)
 
     def display_cart
         if @@cart.empty? 
@@ -21,7 +18,7 @@ module Cart
             end
             puts "***************************************\n"
           end
-        remove = @@prompt.yes?("Should I put anything back?".green)
+        remove = PROMPT.yes?("Should I put anything back?".green)
             if remove 
                 remove_items_from_cart
             else 
@@ -33,14 +30,14 @@ module Cart
     def add_items_to_cart
         add_more = true
             while add_more
-                add_more = @@prompt.yes?("Should I add anything?".green)
+                add_more = PROMPT.yes?("Should I add anything?".green)
                     if !add_more
                         system 'clear'
                         break
                     end
                 puts "Typing the record's " + "CATALOGUE # ".light_magenta + "should do it."
                 product_selection = gets.chomp
-                for item in @@stock
+                for item in STOCK
                     if item["Catno"] == product_selection
                     @@cart << item
                     puts "[You stash #{item["Artist"]}'s - #{item["Album"]} in your cart.]\n".blue.italic
@@ -62,13 +59,12 @@ module Cart
                     @@cart.delete(item)
                     system 'clear'
                     puts "[You put #{item["Artist"]}'s - #{item["Album"]} back on the shelf.]".blue.italic
-                    display_cart
                 else 
                     system 'clear'
                     puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again. They're probably the ones written in " + "purple..".magenta
                     puts
-                    display_cart
                 end
+                display_cart
         end
         system 'clear'
         display_menu
