@@ -8,7 +8,7 @@ require 'require_all'
 require 'json'
 require "terminal-table"
 
-require_all 'lib'
+require_all './lib'
 
 FILE = File.read("./data/vinyl.json")
 STOCK = JSON.parse(FILE)

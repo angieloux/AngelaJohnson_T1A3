@@ -8,7 +8,7 @@ module Counter
   def get_rejected
     
     excuses = ["Oh, sorry. My sister's friend's fish died, and yes, it was tragic.", "That sounds really fun! But sorry, I'm going to be busy not doing that.", "Oh what a shame, I actually have plans to teach my ferret to yodel. Some other time maybe (not)?","The voices in my head are telling me to say no. Sorry!"]
-    puts puts "ಠ_ಠ #{excuses.sample}".light_blue
+    puts puts "ಠ_ಠ #{excuses.sample}".light_cyan
     counter_interaction
   end
 
