@@ -61,9 +61,12 @@ module Cart
         system "clear"
         puts "[You put #{item["Artist"]}'s - #{item["Album"]} back on the shelf.]".light_blue.italic
       else
-        # Display an error to the user, letting them know their input was invalid. Prints a hint about where to find catalogue numbers by referring to their colour on screen. The hint is also highlighted in the same colour.
+        # Display an error to the user, letting them know their input was invalid. 
+        # Prints a hint about where to find catalogue numbers by referring to their colour on screen. 
+        # The hint is also highlighted in the same colour.
         system "clear"
-        puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. Let me peak at those catalogue numbers again. They're probably the ones written in " + "magenta..".magenta
+        puts "INVALID CAT NO\n".red + "Hmm... my eyeballs must be playing up. " + 
+        "Let me peak at those catalogue numbers again. They're probably the ones written in " + "magenta..".magenta
         puts
       end
       display_cart

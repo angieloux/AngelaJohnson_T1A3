@@ -39,7 +39,8 @@ module StoreNavigation
       exit
     when 5
       system "clear"
-      puts "For me? Yay. So wonderful. So generous of you. I love my job.\nI love sorting. What a gift you have given me.\nEVERYTHING. IS. GREAT.\n (╯°□°）╯︵ ┻━┻\n".yellow
+      puts "For me? Yay. So wonderful. So generous of you. I love my job.\nI love sorting. " + 
+      "What a gift you have given me.\nEVERYTHING. IS. GREAT.\n (╯°□°）╯︵ ┻━┻\n".yellow
       puts "[...You back away slowly and exit the store]".italic
       exit
     end

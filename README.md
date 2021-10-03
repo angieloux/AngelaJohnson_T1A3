@@ -6,7 +6,7 @@ Created by Angela Johnson, October 2021 | [Link to Github](https://github.com/an
 3. Change directory into a directory you would like to install AJ Records in (Games for example)
 > `cd Games`
 4. Clone the repository to your computer. If you need help doing this, please click [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
-> `git clone git@github.com:angieloux/AngelaJohnson_T1A3.git`
+> `git clone https://github.com/angieloux/AngelaJohnson_T1A3.git`
 5. Change into the repository directory
 > `cd AngelaJohnson_T1A3`
 6. Change into the src directory
@@ -18,7 +18,7 @@ This will install Bundler and all gem dependencies required by the program. It w
 
 ## System/Requirements 
 
-**NOTE**: This program has been tested only on a Mac operation system. If you are using a Windows or Linux machine and are having troubles loading the .sh file, please read help docs [here](https://www.webservertalk.com/run-sh-files-in-linux-and-windows/).  
+**NOTE**: This program has been tested only on a Mac operating system. If you are using a Windows or Linux machine and are having troubles loading the .sh file, please read help docs [here](https://www.webservertalk.com/run-sh-files-in-linux-and-windows/).  
 
 ## Alternative installation for Windows/Linux 
 If you still cannot get the .sh file to run, please follow these steps: 

@@ -47,7 +47,8 @@ module VinylSection
       end
       # If nothing has been found, the program helps the user by presenting an error and some hints about what to search.
       if !found
-        puts "[No results found... maybe I should try and simplify my search?)]\n".italic.magenta + "HINT: 'beach' will return The Beach Boys\n'rock' will return Psychedelic Rock, Hard Rock, Rockabilly etc,\n'bob' will return Bob Dylan, Bob Marley etc."
+        puts "[No results found... maybe I should try and simplify my search?)]\n".italic.magenta + "HINT: 'beach' " + 
+        "will return The Beach Boys\n'rock' will return Psychedelic Rock, Hard Rock, Rockabilly etc,\n'bob' will return Bob Dylan, Bob Marley etc."
         display_menu # Allow them to search by something else.
       else
         decide_whether_to_add_to_cart
@@ -64,7 +65,8 @@ module VinylSection
       # There are no records < $40 in stock. So, if user input a value < 40, the program will
       # print an error & helper message to inform them of how to rectify it on the next loop iteration.
       if (..40).include?(price)
-        puts "[What was I thinking, I haven't seen a single record here for less than ".italic + "40 bucks.\n".magenta.italic + "Guess I've gotta stretch the purse strings... :'( ]".italic
+        puts "[What was I thinking, I haven't seen a single record here for less than ".italic + "40 bucks.\n".magenta.italic + 
+        "Guess I've gotta stretch the purse strings... :'( ]".italic
         # Go to next iteration, try input again.
       end
       # Loop through each record (hash) in STOCK (array)

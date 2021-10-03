@@ -5,7 +5,9 @@ module Counter
   include Cart
 
   def get_rejected
-    excuses = ["Oh, sorry. My sister's friend's fish died, and yes, it was tragic.", "That sounds really fun! But sorry, I'm going to be busy not doing that.", "Oh what a shame, I actually have plans to teach my ferret to yodel. Some other time maybe (not)?", "The voices in my head are telling me to say no. Sorry!"]
+    excuses = ["Oh, sorry. My sister's friend's fish died, and yes, it was tragic.", "That sounds really fun! " + 
+      "But sorry, I'm going to be busy not doing that.", "Oh what a shame, I actually have plans to teach my ferret to yodel. " + 
+      "Some other time maybe (not)?", "The voices in my head are telling me to say no. Sorry!"]
     puts puts "ಠ_ಠ #{excuses.sample}".light_cyan # Randomly print one of these strings in the array.
     counter_interaction
   end
@@ -48,7 +50,8 @@ module Counter
     when 1
       if @@cart.empty?
         puts "(╭ರ_•́) [The girl gives you a very weird stare..]\n".italic
-        puts "Ummm..you realise don't...have...anything yet?? Go check out our vinyl! \nJust come back when you're done. I'd give you a hand but I'm not a very good employee. Soz!\n".yellow
+        puts "Ummm..you realise don't...have...anything yet?? Go check out our vinyl! \n" + 
+        "Just come back when you're done. " + "I'd give you a hand but I'm not a very good employee. Soz!\n".yellow
         look_around
       else
         puts "Awesome! I'll just tally that up for you...".yellow
@@ -70,7 +73,8 @@ module Counter
       puts "All right, see ya!".yellow
       exit
     when 4
-      puts "Of coooooourse. Nothing I would enjoy more. So wonderful. I love my job. I love sorting. EVERYTHING. IS. GREAT.\n (╯°□°）╯︵ ┻━┻\n".yellow
+      puts "Of coooooourse. Nothing I would enjoy more. So wonderful. I love my job. I love sorting. ".yellow + 
+      "EVERYTHING. IS. GREAT.\n (╯°□°）╯︵ ┻━┻\n".yellow
       puts "[...You back away slowly and exit the store]\n".italic
       exit
     when 5
@@ -79,7 +83,11 @@ module Counter
   end
 
   def go_to_counter
-    puts ["[An all too bubbly 5ft 4 blonde girl greets you with a massive smile.]\n".italic, "[The blonde's gaze at the counter is fixated on group of rebellious looking youths poking around the store. After a moment she notices you are there.]\n".italic, "[The small blonde girl is humming along to the Beatles song that's playing over the speakers]\n".italic].sample # Print a random string from this array each time this method is called
+    puts ["[An all too bubbly 5ft 4 blonde girl greets you with a massive smile.]\n".italic, 
+    "[The blonde's gaze at the counter is fixated on group of rebellious looking youths poking " + 
+    "around the store. After a moment she notices you are there.]\n".italic, "[The small blonde girl " + 
+    "is humming along to the Beatles song that's playing over the speakers]\n".italic].sample 
+    # Print a random string from this array each time this method is called
     counter_interaction
   end
 end
