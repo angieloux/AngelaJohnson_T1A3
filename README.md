@@ -106,12 +106,68 @@ If they choose to remove something, they can type the respective catalogue numbe
 
 #### 2. How the user interacts with features
 
-Feature 1 Interactions:
+Interacting with Feature 2: Store Navigation
+- The menu is the point of convergence for the program. It is returned to many times based on the user's decisions and input. The user simply scrolls through the menu items and selects which option they would like to explore. Depending on whether the user's cart is empty or not, the fourth option will display a slightly different choice and outcome (the girl at the counter is a little moody): 
 
+Exiting the store with an empty cart:
 
+![Feature 1: Store Navigation: Exiting with an empty cart](./docs/StoreNavigationExitWithEmptyCart.gif "Feature 1: Store Navigation: Exiting with an empty cart")
 
+Exiting the store and dumping records on the counter for the girl to sort:
+
+![Feature 1: Store Navigation: Exiting with items in cart](./docs/StoreNavigationExitWithoutEmptyCart.gif "Feature 1: Store Navigation: Exiting with items in cart")
+
+Interacting with Feature 2: Product Filter Search
+
+Genre search: 
+- Users can type keyword/s to find a record to add to their cart.
+![Feature 2: Product Filter Search (Genre)](./docs/ProductFilterSearchByGenre.gif "Feature 2: Product Filter Search (Genre)")
+
+Artist search:
+- Users can type keyword/s to find a record to add to their cart.
+![Feature 2: Product Filter Search (Artist)](./docs/ProductFilterSearchByArtist.gif "Feature 2: Product Filter Search (Artist)")
+
+Album search:
+- Users can type keyword/s to find a record to add to their cart.
+![Feature 2: Product Filter Search (Album)](./docs/ProductFilterSearchByAlbum.gif "Feature 2: Product Filter Search (Album)")
+
+Price search:
+- Users can dictate the max they are willing to pay for a record and return results that are less than or equal to their number.
+![Feature 2: Product Filter Search (Price)](./docs/ProductFilterSearchByPrice.gif "Feature 2: Product Filter Search (Price)")
+
+Interacting with Feature 3: Cart
+- As shown above, users are prompted to add items to cart after they have searched successfully (i.e. it has returned results).
+- They can review their cart and remove items by catalogue number. 
+![Feature 3: Cart - Remove item](./docs/CartRemoveItem.gif "Feature 3: Cart - Remove item")
+
+Interacting with Feature 4: Checkout/Counter
+- Users are able to select from four different options at the counter:
+
+Go ahead and pay
+- Will print cart summary in a table
+- User can either select YES (to confirm, pay and exit) or NO (redirected to Store Navigation menu, as shown here:
+![Feature 4: Checkout - Pay](./docs/CheckoutPayOptions.gif "Feature 4: Checkout - Pay")
+
+Keep looking around
+- Redirect user to Store Navigation menu
+![Feature 4: Checkout - Keep looking around](./docs/CheckoutKeepLooking.gif "Feature 4: Checkout - Keep looking around")
+
+Leave store 
+- Two separate options are displayed, depending if the user's cart is empty or not. 
+- If empty: 
+![Feature 4: Checkout - Leave (empty cart)](./docs/CheckoutLeaveWithEmptyCart.gif "Feature 4: Checkout - Leave (empty cart)")
+
+- If not empty (she REALLY doesn't like sorting): 
+![Feature 4: Checkout - Leave (empty cart)](./docs/CheckoutLeaveWithItemsInCart.gif "Feature 4: Checkout - Leave (empty cart)")
+
+Ask the girl out
+- If you ask the girl out, it will randomly choose between 4 different rejection interactions, and then display the counter menu again.
+- If empty: 
+![Feature 4: Checkout - Ask her out](./docs/CheckoutAskGirlOut.gif "Feature 4: Checkout - Ask her out")
 
 #### 3. How errors are handled by app and displayed to user
+The program has a number
+
 
 ## Control Flow Diagram
 ![Control flow diagram](./docs/ControlFlowDiagram.png "Control Flow Diagram")
