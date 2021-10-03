@@ -24,7 +24,7 @@ This will install Bundler and all gem dependencies required by the program. It w
 If you still cannot get the .sh file to run, please follow these steps: 
 1. Manually install all gems in the Gem Dependencies list below. For example, to install the gem 'colorize', in your terminal type:
 > gem install colorize
-2. Once ALL gems have been installed, enter the following:
+2. Once ALL gems have been installed, enter the following from inside the `src` directory:
 > `ruby ajrecords.rb`
 
 This will run the program. 
