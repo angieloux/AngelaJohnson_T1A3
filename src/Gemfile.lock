@@ -3,7 +3,7 @@ GEM
   specs:
     artii (2.1.2)
     colorize (0.8.1)
-    json (2.5.1)
+    json (2.6.2)
     pastel (0.8.0)
       tty-color (~> 0.5)
     require_all (3.0.0)
@@ -29,7 +29,7 @@ GEM
       tty-screen (~> 0.8)
       wisper (~> 2.0)
     tty-screen (0.8.1)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.3.0)
     unicode_utils (1.4.0)
     wisper (2.0.1)
 
